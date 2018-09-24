@@ -1,0 +1,43 @@
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+$breakpoints: (
+  'sm': $breakpoint-sm,
+  'md': $breakpoint-md,
+  'lg': $breakpoint-lg,
+  'xl': $breakpoint-xl,
+) !default;
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin modify($name, $modificator) {
+  #{$name}--#{$modificator} {
+    @content;
+  }
+}
+
+$color-dark:  #021635;
+$color-light: #2f4bd6;
+$color-contrast: #5ea6fb;
+
+$ff-nova: 'Proxima Nova', sans-serif;
+
+@mixin make-ff-nova($fz: 14px, $fw: 400, $fs: normal) {
+  font-family: $ff-nova;
+  font-size: $fz;
+  font-weight: $fw;
+  font-style: $fs;
+}

@@ -1,0 +1,27 @@
+.page-index {
+  &__jumbotron {
+    padding-top: 155px;
+  }
+
+  &__logotype {
+    display: block;
+
+    width: 375px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__slogan {
+    margin: 17px 0 84px;
+
+    text-align: center;
+    letter-spacing: -1.2px;
+
+    color: #c1c1c1;
+
+    line-height: 1;
+
+    @include make-ff-nova(24px);
+  }
+}

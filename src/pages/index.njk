@@ -1,0 +1,21 @@
+{% extends "layout.njk" %}
+
+{% set assets = datasets.get('assets') %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="page-index__jumbotron">
+          {% set logo = assets['logotype-jumbotron'] %}
+
+          <img class="page-index__logotype" src="{{ logo.ref }}" alt="{{ logo.alt }}" width="{{ logo.width }}" height="{{ logo.height }}">
+        </div>
+
+        <p class="page-index__slogan">
+          A client for your DApps.
+        </p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

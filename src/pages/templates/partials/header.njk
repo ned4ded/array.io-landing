@@ -1,0 +1,11 @@
+{% set links = datasets.get('site-map') %}
+
+<header class="container">
+  <ul class="header">
+    {% for link in links %}
+    <li class="header__item">
+      <a class="header__link" href="{{ link.ref }}">{{ link.name }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</header>

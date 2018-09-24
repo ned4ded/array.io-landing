@@ -1,0 +1,16 @@
+@import 'fonts/base';
+@import 'variables';
+@import 'bootfix';
+
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  background-image: url('../assets/imgs/body-bg-1.png'), linear-gradient(86deg, #031026, #00050c);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center 768px, 0 0;
+}
+
+@import 'blocks/base';
+@import 'pages/base';

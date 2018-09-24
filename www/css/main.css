@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src: local("Proxima Nova Regular"), local("ProximaNova-Regular"), local("Proxima Nova"), local("ProximaNova"), url("../assets/fonts/ProximaNova-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: local("Proxima Nova Bold"), local("ProximaNova-Bold"), local("Proxima Nova"), local("ProximaNova"), url("../assets/fonts/ProximaNova-Bold.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1080px; } }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-image: url("../assets/imgs/body-bg-1.png"), linear-gradient(86deg, #031026, #00050c);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center 768px, 0 0; }
+
+.header {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 60px;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .header__item {
+    margin: 0px 12px; }
+    .header__item:first-child {
+      margin-left: 0; }
+    .header__item:last-child {
+      margin-right: 0; }
+  .header__link {
+    display: inline-block;
+    -webkit-transition: color .3s ease-in, text-shadow .3s ease-in;
+    transition: color .3s ease-in, text-shadow .3s ease-in;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: -0.9px;
+    color: #ffffff;
+    text-shadow: 0 0 3px rgba(94, 166, 251, 0), 0 0 7px rgba(94, 166, 251, 0);
+    line-height: 1;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal; }
+    .header__link:hover {
+      -webkit-transition: color .05s ease-in, text-shadow .05s ease-in;
+      transition: color .05s ease-in, text-shadow .05s ease-in;
+      color: #2f4bd6;
+      text-shadow: 0 0 3px rgba(94, 166, 251, 0.4), 0 0 7px rgba(94, 166, 251, 0.25); }
+
+.page-index__jumbotron {
+  padding-top: 155px; }
+
+.page-index__logotype {
+  display: block;
+  width: 375px;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto; }
+
+.page-index__slogan {
+  margin: 17px 0 84px;
+  text-align: center;
+  letter-spacing: -1.2px;
+  color: #c1c1c1;
+  line-height: 1;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal; }

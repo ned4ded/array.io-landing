@@ -1,0 +1,46 @@
+.header {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 60px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  &__item {
+    margin: 0px 12px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+
+    transition: color .3s ease-in, text-shadow .3s ease-in;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: -0.9px;
+
+    color: #ffffff;
+    text-shadow: 0 0 3px rgba(94, 166, 251, 0), 0 0 7px rgba(94, 166, 251, 0);
+
+    line-height: 1;
+
+    @include make-ff-nova(18px, 400);
+
+    &:hover {
+      transition: color .05s ease-in, text-shadow .05s ease-in;
+
+      color: $color-light;
+      text-shadow: 0 0 3px rgba(94, 166, 251, .4), 0 0 7px rgba(94, 166, 251, .25);
+    }
+  }
+}

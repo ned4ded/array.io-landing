@@ -1,0 +1,29 @@
+{% set fm = datasets.get('front-matter') %}
+
+<!doctype html>
+<html class="no-js" lang="{{ fn.lang }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{ fn.title }}</title>
+  <meta name="description" content="{{ fn.description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-grid.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  {% include "partials/header.njk" %}
+
+  {% block content %} {% endblock %}
+
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
