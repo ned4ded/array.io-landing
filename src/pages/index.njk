@@ -3,7 +3,7 @@
 {% set assets = datasets.get('assets') %}
 
 {% block content %}
-  <div class="container">
+  <div class="container page-index">
     <div class="row">
       <div class="col-12">
         <div class="page-index__jumbotron">
@@ -15,6 +15,10 @@
         <p class="page-index__slogan">
           A client for your DApps.
         </p>
+
+        <div class="page-index__request">
+          {% include "partials/input-request.njk" %}
+        </div>
       </div>
     </div>
   </div>

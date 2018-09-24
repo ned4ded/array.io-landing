@@ -62,23 +62,88 @@ body {
       color: #2f4bd6;
       text-shadow: 0 0 3px rgba(94, 166, 251, 0.4), 0 0 7px rgba(94, 166, 251, 0.25); }
 
-.page-index__jumbotron {
-  padding-top: 155px; }
-
-.page-index__logotype {
+.request {
+  position: relative;
   display: block;
-  width: 375px;
-  height: auto;
-  margin-right: auto;
-  margin-left: auto; }
+  width: 364px; }
+  .request__input {
+    display: block;
+    width: 100%;
+    padding: 8px 120px 6px 6px;
+    letter-spacing: -0.8px;
+    color: #021635;
+    border: solid 1px black;
+    border-radius: 3px;
+    background-color: #ffffff;
+    -webkit-box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    line-height: 1;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal; }
+  .request__label {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: #2e49d4;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#2f4bd6), to(#5ea6fb));
+    background-image: linear-gradient(to top, #2f4bd6, #5ea6fb);
+    -webkit-box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3); }
+  .request__submit {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    border: none;
+    background-color: #021330;
+    -webkit-box-shadow: inset 0.7px 1.9px 0.8px 0.2px rgba(0, 0, 0, 0.24);
+            box-shadow: inset 0.7px 1.9px 0.8px 0.2px rgba(0, 0, 0, 0.24);
+    line-height: 1;
+    letter-spacing: 0.6px;
+    color: #d6d6d6;
+    padding: 8px 20px 7px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    font-style: normal; }
+    .request__submit:active {
+      margin: 1px;
+      padding: 7px 19px 6px;
+      -webkit-transform: translateY(calc(-50% - 1px));
+              transform: translateY(calc(-50% - 1px)); }
 
-.page-index__slogan {
-  margin: 17px 0 84px;
-  text-align: center;
-  letter-spacing: -1.2px;
-  color: #c1c1c1;
-  line-height: 1;
-  font-family: "Proxima Nova", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  font-style: normal; }
+.page-index {
+  padding-bottom: 350px;
+  padding-top: 155px; }
+  .page-index__logotype {
+    display: block;
+    width: 375px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto; }
+  .page-index__slogan {
+    margin: 17px 0 84px;
+    text-align: center;
+    letter-spacing: -1.2px;
+    color: #c1c1c1;
+    line-height: 1;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal; }
+  .page-index__request {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%; }

@@ -1,6 +1,8 @@
 .page-index {
+  padding-bottom: 350px;
+  padding-top: 155px;
+
   &__jumbotron {
-    padding-top: 155px;
   }
 
   &__logotype {
@@ -23,5 +25,11 @@
     line-height: 1;
 
     @include make-ff-nova(24px);
+  }
+
+  &__request {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 }
