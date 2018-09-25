@@ -1,66 +1,90 @@
-// TODO: Кнопка сабмита и инпут должны быть зафлексованы, чтобы в случае изменения надписи ниче не поехало,
-// Сл-но перенеси часть стилей с инпута на лейбл, а часть стилей с лейбла - на форму
-
 .request {
   position: relative;
+
   display: block;
+
   width: 364px;
+  padding: 2px;
+
+  border-radius: 5px;
+  background-color: #2e49d4;
+  background-image: linear-gradient(to top, $color-light, $color-contrast);
+  box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
 
   &__input {
     display: block;
 
     width: 100%;
-    padding: 8px 120px 6px 6px;
+    padding: 8px 6px 6px 3px;
 
     letter-spacing: -0.8px;
-    // color: #d6d6d6;
 
     color: $color-dark;
-    border: solid 1px black;
-    border-radius: 3px;
-    background-color: #ffffff;
-    box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    // color: #d6d6d6;
+    border: none;
+    background: none;
 
     line-height: 1;
 
     @include make-ff-nova(16px);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:invalid {
+      box-shadow: none;
+    }
+
+    &::placeholder {
+      color: #d6d6d6;
+      line-height: 1;
+      letter-spacing: -0.8px;
+      @include make-ff-nova(16px);
+    }
   }
 
-  &__label {
-    display: block;
+  &__container {
     position: relative;
-    width: 100%;
 
-    padding: 2px;
-    border-radius: 5px;
-    background-color: #2e49d4;
-    background-image: linear-gradient(to top, $color-light, $color-contrast);
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+
+    width: 100%;
+    padding: 0 3px;
+
+    border: solid 1px black;
+    border-radius: 3px;
+    background-color: #ffffff;
     box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
   }
 
   &__submit {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
+    margin: 0;
+    padding: 8px 20px 7px;
+
+    cursor: pointer;
+    white-space: pre;
+    letter-spacing: 0.6px;
+
+    color: #d6d6d6;
     border: none;
+    border-radius: 3px;
     background-color: #021330;
     box-shadow: inset 0.7px 1.9px 0.8px 0.2px rgba(0, 0, 0, 0.24);
+
     line-height: 1;
-    letter-spacing: 0.6px;
-    color: #d6d6d6;
-    padding: 8px 20px 7px;
-    cursor: pointer;
-    border-radius: 3px;
-    margin: 0;
 
     @include make-ff-nova(11px);
 
     &:active {
       margin: 1px;
       padding: 7px 19px 6px;
+    }
 
-      transform: translateY(calc(-50% - 1px));
+    &:focus {
+      outline: none;
     }
   }
 }
