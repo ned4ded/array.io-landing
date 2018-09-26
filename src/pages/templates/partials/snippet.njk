@@ -1,0 +1,1 @@
+{% macro make(lines, mods) %}<pre class="snippet{{ ' ' +  mods if mods}}"><code class="snippet__content">{% for line in lines %}<span class="snippet__line">{{ line }}</span>{% endfor %}</code></pre>{% endmacro %}

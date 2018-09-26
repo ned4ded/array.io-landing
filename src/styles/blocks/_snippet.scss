@@ -1,0 +1,25 @@
+.snippet {
+  overflow: auto;
+
+  margin: 0;
+  padding: 6px 8px;
+
+  border-radius: 3px;
+  background-color: $color-contrast;
+
+  &__content {
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    hyphens: none;
+  }
+
+  &__line {
+    display: block;
+
+    color: black;
+
+    font-family: monospace;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,2 @@
+"use strict";document.addEventListener("DOMContentLoaded",function(){var e=Array.from(document.querySelectorAll("[data-toggle]")).map(function(e){return{toggler:e,togglees:JSON.parse(e.dataset.toggle).map(function(e){return document.getElementById(e)})}}),a=function(e){"true"!=e.dataset.visible?e.dataset.visible=!0:e.dataset.visible=!1};e.forEach(function(e){var t=e.toggler,n=e.togglees;t.addEventListener("click",function(e){e.preventDefault(),n.forEach(a)})})},!1);
+//# sourceMappingURL=main.js.map

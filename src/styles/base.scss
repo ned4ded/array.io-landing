@@ -6,10 +6,86 @@ body {
   min-height: 100vh;
   margin: 0;
 
-  background-image: url('../assets/imgs/body-bg-1.png'), linear-gradient(86deg, #031026, #00050c);
-  background-repeat: no-repeat, repeat;
+  background-image: url('../assets/imgs/body-bg-1.png'), url('../assets/imgs/body-bg-2.png'), url('../assets/imgs/body-bg-2.png'), linear-gradient(86deg, #031026, #00050c);
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
   background-size: auto;
-  background-position: center 768px, 0 0;
+  background-position: center 768px, center 1755px, center 2755px, 0 0;
+}
+
+.link {
+  position: relative;
+  z-index: 0;
+
+  display: inline-flex;
+  align-items: center;
+
+  transition: color .3s ease-in, box-shadow .3s ease-in;
+  text-decoration: none;
+
+  color: $color-contrast;
+  border-radius: 4px;
+  background-image: linear-gradient(to top, $color-light, $color-contrast);
+  box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+
+  font-size: 24px;
+  line-height: 41px;
+
+  &:before {
+    position: absolute;
+    z-index: -1;
+    top: 2px;
+    left: 2px;
+
+    display: block;
+
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+
+    content: '';
+    transition: box-shadow .3s ease-in;
+
+    border: 1px solid hsl(0, 0%, 0%);
+    border-radius: 3px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0);
+  }
+
+  &:active:before {
+    transition: box-shadow .1s ease-in;
+
+    box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover {
+    transition: color .1s ease-in, box-shadow .1s ease-in;
+
+    color: darken($color-light, 10%);
+  }
+
+  &__icon {
+    display: inline-block;
+
+    width: 46px;
+    padding: 0 9px 0 11px;
+
+    transition: fill .3s ease-in;
+
+    border-right: 1px solid hsl(0, 0%, 95%);
+
+    fill: $color-contrast;
+  }
+
+  &:hover &__icon {
+    transition: fill .1s ease-in;
+
+    fill: darken($color-light, 10%);
+  }
+
+  &__text {
+    display: inline-block;
+
+    padding: 0 14px 0 10px;
+  }
 }
 
 @import 'blocks/base';

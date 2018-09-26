@@ -45,13 +45,14 @@
 
 
   
+
   <div class="container page-index">
-    <div class="row">
+    <div class="row page-index__block page-index__block--jumbotron">
       <div class="col-12">
         <div class="page-index__jumbotron">
           
 
-          <img class="page-index__logotype" src="assets/imgs/logo-array-smaller.png" alt="Array.io Logotype" width="451" height="471">
+          <img class="page-index__logotype" src="assets/imgs/logo-array-smaller.png" alt="Array.io Logotype" width="375" height="394">
         </div>
 
         <p class="page-index__slogan">
@@ -68,6 +69,169 @@
 </form>
 
         </div>
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--instruction">
+      <div class="col-12">
+        
+
+<div class="instruction">
+  <h2 class="instruction__heading"><a data-toggle='["instruction-steps"]' class="instruction__heading-link" href="#instruction-steps">How to become a witness<span class="instruction__heading-icon">?</span></a></h2>
+
+  <div id="instruction-steps" class="instruction__guideline" data-visible="false">
+
+    <ul class="instruction__steps">
+      <li class="step instruction__step">
+        <p class="step__paragraph">Install array-io node software</p>
+
+        <p class="step__paragraph">
+          <a href="" class="link">
+            <svg class="link__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="31" viewBox="0 0 32.58 31.77">
+              <path fill-rule="evenodd" d="M16.29,0a16.29,16.29,0,0,0-5.15,31.75c.81.15,1.11-.35,1.11-.79s0-1.41,0-2.77C7.7,29.18,6.74,26,6.74,26a4.31,4.31,0,0,0-1.81-2.38c-1.48-1,.11-1,.11-1a3.42,3.42,0,0,1,2.5,1.68,3.47,3.47,0,0,0,4.74,1.35,3.48,3.48,0,0,1,1-2.18C9.7,23.08,5.9,21.68,5.9,15.44a6.3,6.3,0,0,1,1.68-4.37,5.86,5.86,0,0,1,.16-4.31s1.37-.44,4.48,1.67a15.44,15.44,0,0,1,8.16,0c3.11-2.11,4.48-1.67,4.48-1.67A5.85,5.85,0,0,1,25,11.07a6.29,6.29,0,0,1,1.67,4.37c0,6.26-3.81,7.63-7.44,8a3.89,3.89,0,0,1,1.11,3c0,2.18,0,3.93,0,4.47s.29.94,1.12.78A16.29,16.29,0,0,0,16.29,0Z" data-name="Layer 1"></path>
+            </svg>
+            <span class="link__text">GitHub</span>
+          </a>
+        </p>
+      </li>
+
+      <li class="step instruction__step">
+        <p class="step__paragraph">If you’re using  MacOS, run the following command to ensure that you have everything a Linux user has.</p>
+
+        
+
+        <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">$ cmake -DLINUX_SIGACTION_SIGSEGV=DISABLE ..</span></code></pre>
+      </li>
+
+      <li class="step instruction__step">
+        <p class="step__paragraph">You should be able to spawn four threads. Alternatively, if you process with eight cores, you can make eight threads. Choose it according to your core/CPU environment, so that it works efficiently.</p>
+
+        
+
+        <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">$ make -j4</span></code></pre>
+      </li>
+
+      <li class="step instruction__step">
+        <p class="step__paragraph">Connect to ‘newton.array.io’ and create a wallet with a chain ID. After the build you will get access the ‘programs’ directory which contains CliWallet and WitnessNode.</p>
+
+        
+
+        <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">$ ./programs/cli_wallet/cli_wallet -s ws://newton.array.io:8090 --chain-id b6b83a593686087531ce581540564d20b2f75ff9879e9dd2eccfa9a79744b949</span></code></pre>
+      </li>
+
+
+    </ul>
+
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--features">
+      <div class="col-12">
+        <div class="features">
+  <div class="features__img">
+    <div class="features__img-part features__img-part--top"></div>
+    <div class="features__img-part features__img-part--middle"></div>
+    <div class="features__img-part features__img-part--bottom"></div>
+  </div>
+
+  <ul class="features__list">
+    <li class="features__item features__item--top">
+      <span class="features__text">
+        A combination of a blockchain, backed by the Delegated Proof-of-Stake consensus algorithm, and the support for smart contracts
+      </span>
+    </li>
+    <li class="features__item features__item--middle">
+      <span class="features__text">
+        Оffers an extensive toolkit that simpliﬁes the creation and deployment of DApps
+      </span>
+    </li>
+    <li class="features__item features__item--bottom">
+      <span class="features__text">
+        A marketplace with a user-friendly lite client that breaks down the entry barriers for regular users into the world of decentralized applications
+      </span>
+    </li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--content">
+      <div class="col-12 page-index__content">
+        <div class="page-index__figure">
+          <img class="page-index__figure-img" src="" alt="" width="340" height="240">
+        </div>
+
+        <p class="page-index__text">Snippet →  The Core is the undercurrent power that runs deep in any system and defines its capabilities. We’ve made speed and convenience our priorities. That is why our blockchain is based on DPoS (Delegated Proof-of-Stake) consensus algorithm that allows faster transactions and has the innate support for smart contracts written in Solidity. This way our blockchain confirms transactions faster, hence it executes contracts faster, as well as it brings blockchain technology closer to the real world use. As you read these lines, all the existing platforms are trying to fight the issue of slow transactions. But the blockchain world doesn’t have ready decisions yet because it falls into the trap of using the Etherium Virtual Machine (EVM). To fight this problem, we’ve built our own virtual machine (Array Virtual Machine or AVM) that performs actions faster (e.g. it executes smart contracts 25% faster than Python-based VMs).</p>
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--content">
+      <div class="col-12 page-index__content">
+        <p class="page-index__text page-index__text--align--right">Snippet → about Developer tools:
+          The Array Platform allows developers to easily create their DApps using a set of tools which include a Software Development Kit, IDE plugins, Array.io Node all-in-one installation tool and the extensive documentation with tutorials and guidelines.
+          The SDK allows developers to create cross-blockchain applications with the support of atomic swaps, payment channels and the lightning network protocol. It consists of a smart contract compiler and debugger, as well as a set of APIs for cross-chain connectivity and IPFS interaction. IDE plugins offer easy-to-use environment for DApp-creation and deployment, while the Array.io Node installation tool enables you to connect to our blockchain very fast.</p>
+
+        <div class="page-index__figure">
+          <img class="page-index__figure-img" src="" alt="" width="340" height="240">
+        </div>
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--content">
+      <div class="col-12 page-index__content">
+        
+        <div class="page-index__figure">
+          <img class="page-index__figure-img" src="assets/imgs/page-index-video-placeholder.jpg" alt="Video Placeholder" width="340" height="254">
+        </div>
+
+        <p class="page-index__text">Snippet → Our client application has a user-friendly interface which gives access to the DApp marketplace and runs the installed DApps in an isolated environment. It has several components built in: Local Storage, IPFS, OrbitDB, and many more. We are using the IPFS protocol to give our users the safest way to store data. But if you wish to manage large amounts of data without persistent Internet connection, then you can use the Local Storage. The lite client is the manifestation of our philosophy of clarity that drives us to make complicated things easy and enjoyable for the user.</p>
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--content">
+      <div class="col-12 page-index__content">
+        <p class="page-index__text page-index__text--align--right">Snippet → Another factor that we value the most is security. We protect our users by providing them with two kinds of keys - public and private ones. To make our platform a safe and pleasant experience, we’ve created a shield called the Keychain.
+          Keychain is a system for creating and managing private keys, signing transactions, and encrypting the data. It supports various formats of private keys (e.g. ECDSA and RSA) and can be used by a node, a Client or a DApp's NodeJS server to sign transactions. It can also be used by a Web application to keep the keys in an isolated environment.</p>
+
+        <div class="page-index__figure">
+          <img class="page-index__figure-img" src="" alt="" width="340" height="240">
+        </div>
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--ido">
+      <div class="col-12">
+        <div class="ido">
+  <p class="ido__paragraph ido__paragraph--align--center">IDO  (Initial Development Offering)</p>
+  <p id="ido-less" data-visible="true" class="ido__paragraph ido__paragraph--align--center">A novel blockchain project requires not only the cutting-edge development ideas, but also the right attitude to fundraising. Initial Development Oﬀering, or IDO, is an innovative approach to attract investments, that is deemed fair for all parties involved. Although it has some features of the ICO (i.e. the distribution of tokens among the project backers in return for their ETH), the core ideas of IDO are quite different.</p>
+
+  <div data-visible="false" data-toggle='["ido-toggle-btn", "ido-more", "ido-less"]' id="ido-more" class="ido__more">
+    <p class="ido__paragraph">
+      Unlike the ICOs that present a completely unrealistic roadmap and request to have all the resources in advance, IDO’s funding model is designed to be more adaptive to the realities of the software development process and catering to both the contributors’ desires and the project team.
+    </p>
+
+    <p class="ido__paragraph">
+      Our funding model introduces the concept of Token Generation Rounds (TGRs). Stages of a TGR are equally spaced time intervals that determine the split percentage of the minted IDO tokens according to a simple principle: “The later the stage, the larger the contributor’s share”. Price-wise it means that ‘early birds’ get less tokens for the same amount of contribution, which might make the investor wait for the last stage. However, the investors are motivated to get into the project early on since TGRs have a maxcap that could be hit at any time, closing the whole round.
+    </p>
+
+    <p class="ido__paragraph">
+      Unlike ICO, initial development tokens are refundable by unlocking the same amount of ETH which is then transferred back to the account that initiated the return. A particular part of the tokens can be exchanged back (burned) to retrieve the funds.
+    </p>
+
+    <p class="ido__paragraph">
+      Array.io is the first project to be funded through the IDO. We believe that at the moment it is the perfectly responsible way of fundraising, and in the future will become the common practice for attracting investments not only in blockchain projects but overall in software development.
+    </p>
+  </div>
+
+  <div class="ido__btn-container">
+    <a id="ido-toggle-btn" data-visible="true" data-toggle='["ido-toggle-btn", "ido-more", "ido-less"]' href="#ido-more" class="ido__btn"><span class="ido__btn-text">learn more</span></a>
+  </div>
+</div>
+
       </div>
     </div>
   </div>

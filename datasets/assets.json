@@ -2,7 +2,13 @@
   "logotype-jumbotron" : {
     "ref" : "assets/imgs/logo-array-smaller.png",
     "alt" : "Array.io Logotype",
-    "width" : 451,
-    "height" : 471
+    "width" : 375,
+    "height" : 394
+  },
+  "video-placeholder" : {
+    "ref" : "assets/imgs/page-index-video-placeholder.jpg",
+    "alt" : "Video Placeholder",
+    "width" : 340,
+    "height" : 254
   }
 }

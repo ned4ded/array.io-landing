@@ -3,8 +3,9 @@
 {% set assets = datasets.get('assets') %}
 
 {% block content %}
+
   <div class="container page-index">
-    <div class="row">
+    <div class="row page-index__block page-index__block--jumbotron">
       <div class="col-12">
         <div class="page-index__jumbotron">
           {% set logo = assets['logotype-jumbotron'] %}
@@ -19,6 +20,68 @@
         <div class="page-index__request">
           {% include "partials/input-request.njk" %}
         </div>
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--instruction">
+      <div class="col-12">
+        {% include 'partials/instruction.njk' %}
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--features">
+      <div class="col-12">
+        {% include 'partials/features.njk' %}
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--content">
+      <div class="col-12 page-index__content">
+        <div class="page-index__figure">
+          <img class="page-index__figure-img" src="" alt="" width="340" height="240">
+        </div>
+
+        <p class="page-index__text">Snippet →  The Core is the undercurrent power that runs deep in any system and defines its capabilities. We’ve made speed and convenience our priorities. That is why our blockchain is based on DPoS (Delegated Proof-of-Stake) consensus algorithm that allows faster transactions and has the innate support for smart contracts written in Solidity. This way our blockchain confirms transactions faster, hence it executes contracts faster, as well as it brings blockchain technology closer to the real world use. As you read these lines, all the existing platforms are trying to fight the issue of slow transactions. But the blockchain world doesn’t have ready decisions yet because it falls into the trap of using the Etherium Virtual Machine (EVM). To fight this problem, we’ve built our own virtual machine (Array Virtual Machine or AVM) that performs actions faster (e.g. it executes smart contracts 25% faster than Python-based VMs).</p>
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--content">
+      <div class="col-12 page-index__content">
+        <p class="page-index__text page-index__text--align--right">Snippet → about Developer tools:
+          The Array Platform allows developers to easily create their DApps using a set of tools which include a Software Development Kit, IDE plugins, Array.io Node all-in-one installation tool and the extensive documentation with tutorials and guidelines.
+          The SDK allows developers to create cross-blockchain applications with the support of atomic swaps, payment channels and the lightning network protocol. It consists of a smart contract compiler and debugger, as well as a set of APIs for cross-chain connectivity and IPFS interaction. IDE plugins offer easy-to-use environment for DApp-creation and deployment, while the Array.io Node installation tool enables you to connect to our blockchain very fast.</p>
+
+        <div class="page-index__figure">
+          <img class="page-index__figure-img" src="" alt="" width="340" height="240">
+        </div>
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--content">
+      <div class="col-12 page-index__content">
+        {% set video = assets['video-placeholder'] %}
+        <div class="page-index__figure">
+          <img class="page-index__figure-img" src="{{ video.ref }}" alt="{{ video.alt }}" width="{{ video.width }}" height="{{ video.height }}">
+        </div>
+
+        <p class="page-index__text">Snippet → Our client application has a user-friendly interface which gives access to the DApp marketplace and runs the installed DApps in an isolated environment. It has several components built in: Local Storage, IPFS, OrbitDB, and many more. We are using the IPFS protocol to give our users the safest way to store data. But if you wish to manage large amounts of data without persistent Internet connection, then you can use the Local Storage. The lite client is the manifestation of our philosophy of clarity that drives us to make complicated things easy and enjoyable for the user.</p>
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--content">
+      <div class="col-12 page-index__content">
+        <p class="page-index__text page-index__text--align--right">Snippet → Another factor that we value the most is security. We protect our users by providing them with two kinds of keys - public and private ones. To make our platform a safe and pleasant experience, we’ve created a shield called the Keychain.
+          Keychain is a system for creating and managing private keys, signing transactions, and encrypting the data. It supports various formats of private keys (e.g. ECDSA and RSA) and can be used by a node, a Client or a DApp's NodeJS server to sign transactions. It can also be used by a Web application to keep the keys in an isolated environment.</p>
+
+        <div class="page-index__figure">
+          <img class="page-index__figure-img" src="" alt="" width="340" height="240">
+        </div>
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--ido">
+      <div class="col-12">
+        {% include 'partials/ido.njk' %}
       </div>
     </div>
   </div>
