@@ -413,6 +413,7 @@ body {
     color: transparent;
     background-image: -webkit-gradient(linear, left top, right top, from(#5da4fa), color-stop(31%, #ffffff), to(#ffffff));
     background-image: linear-gradient(to right, #5da4fa, #ffffff 31%, #ffffff);
+    -webkit-background-clip: text;
     background-clip: text;
     line-height: 1;
     font-family: "Proxima Nova", sans-serif;

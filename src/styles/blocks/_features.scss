@@ -57,6 +57,7 @@
 
     color: transparent;
     background-image: linear-gradient(to right, #5da4fa, #ffffff 31%, #ffffff);
+    -webkit-background-clip: text;
     background-clip: text;
 
     line-height: 1;
