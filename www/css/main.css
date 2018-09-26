@@ -264,19 +264,9 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap; }
-  .step:not(:last-child) {
-    padding-bottom: 15px;
-    margin-bottom: 10px; }
-    .step:not(:last-child):after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      background-color: rgba(255, 255, 255, 0.1);
-      display: block;
-      bottom: 0;
-      left: 0; }
+          flex-flow: column nowrap;
+  padding: 15px 8px;
+  margin: 5px 10px; }
   .step__paragraph {
     margin-top: 0;
     margin-bottom: 28px;
@@ -333,23 +323,90 @@ body {
     .instruction__heading:hover .instruction__heading-icon {
       background-image: url("../assets/imgs/icon-question-mark-white.png"); }
   .instruction__guideline {
-    display: none;
-    width: 700px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 710px;
     margin: 25px 0 0;
-    padding: 15px 8px;
     border: 1px solid #4d59a1;
     border-radius: 4px;
     background-color: #04142e;
     -webkit-box-shadow: 0px 0px 5px 5px #193359, 0px 0px 13px 7px rgba(94, 166, 251, 0.2);
-            box-shadow: 0px 0px 5px 5px #193359, 0px 0px 13px 7px rgba(94, 166, 251, 0.2); }
-    .instruction__guideline[data-visible="true"] {
-      display: block; }
-    .instruction__guideline[data-visible="false"] {
+            box-shadow: 0px 0px 5px 5px #193359, 0px 0px 13px 7px rgba(94, 166, 251, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 10; }
+    .no-js .instruction__guideline {
       display: none; }
+  .instruction__modal {
+    display: none; }
+    .instruction__modal[data-visible="false"] {
+      display: none; }
+    .instruction__modal[data-visible="true"] {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
   .instruction__steps {
     margin: 0;
     padding: 0;
     list-style: none; }
+  .instruction__btn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    line-height: 30px;
+    min-width: 18.3%;
+    color: white;
+    cursor: pointer;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal; }
+    .instruction__btn:active {
+      padding: 0; }
+    .instruction__btn--left {
+      padding-left: 20px;
+      margin-left: 20px;
+      background-image: url("../assets/imgs/icon-modal-arrow-prev.png");
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: left calc(50% + 2px); }
+      .instruction__btn--left:active {
+        padding-left: 20px; }
+    .instruction__btn--right {
+      padding-right: 20px;
+      text-align: right;
+      margin-right: 20px;
+      background-image: url("../assets/imgs/icon-modal-arrow-next.png");
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: right calc(50% + 2px); }
+      .instruction__btn--right:active {
+        padding-right: 20px; }
+  .instruction__lining {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(circle, rgba(1, 12, 28, 0.8), #010c1c);
+    cursor: pointer; }
+    .instruction__lining[data-visible="true"] {
+      display: block; }
 
 .features {
   display: -webkit-box;

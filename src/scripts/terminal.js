@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', (() => {
+  document.querySelector('html').classList.remove('no-js');
 
   const pairs = Array.from( document.querySelectorAll('[data-toggle]') ).map(toggler => {
     const ids = JSON.parse(toggler.dataset.toggle);
@@ -30,4 +31,23 @@ document.addEventListener('DOMContentLoaded', (() => {
     });
   });
 
-}), false);;
+  const instruction = document.getElementById('instruction-steps');
+  const prev = document.getElementById('instruction-steps-prev');
+  const next = document.getElementById('instruction-steps-next');
+
+  const options = {
+    simulateTouch: false,
+    observer: true,
+    observeParents: true,
+    navigation: {
+      prevEl: prev,
+      nextEl: next,
+    }
+  }
+
+  const swiper = (() => {
+    return instruction ? new Swiper(instruction, options) : null;
+  })();
+
+
+}), false);
