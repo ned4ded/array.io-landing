@@ -1,11 +1,15 @@
 .snippet {
   overflow: auto;
 
-  margin: 0;
-  padding: 6px 8px;
+  margin: 0 0 35px;
+  padding: 0;
 
   border-radius: 3px;
   background-color: $color-contrast;
+
+  &:last-child {
+    margin: 0;
+  }
 
   &__content {
     white-space: pre;
@@ -16,6 +20,8 @@
 
   &__line {
     display: block;
+
+    margin: 8px 12px;
 
     color: black;
 

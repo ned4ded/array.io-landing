@@ -1,4 +1,18 @@
 .request {
+  @keyframes flickering {
+    0% {
+      box-shadow: 0px 0px 30px 25px rgba(29, 39, 56, 0.75), 0px 0px 15px 10px #1d2738, inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    50% {
+      box-shadow: 0px 0px 30px 20px rgba(29, 39, 56, 0.6), 0px 0px 15px 10px #1d2738, inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    100% {
+      box-shadow: 0px 0px 30px 25px rgba(29, 39, 56, 0.75), 0px 0px 15px 10px #1d2738, inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    }
+  }
+
   position: relative;
 
   display: block;
@@ -10,6 +24,10 @@
   background-color: #2e49d4;
   background-image: linear-gradient(to top, $color-light, $color-contrast);
   box-shadow: 0px 0px 30px 25px rgba(29, 39, 56, 0.75), 0px 0px 15px 10px #1d2738, inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+  animation-name: flickering;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
 
   &__input {
     display: block;

@@ -23,25 +23,31 @@
   
 
 <header class="container">
-  <ul class="header">
-    
-    <li class="header__item">
-      <a class="header__link" href="#">Skeleton</a>
-    </li>
-    
-    <li class="header__item">
-      <a class="header__link" href="#">Funding</a>
-    </li>
-    
-    <li class="header__item">
-      <a class="header__link" href="#">FAQ</a>
-    </li>
-    
-    <li class="header__item">
-      <a class="header__link" href="#">Contact</a>
-    </li>
-    
-  </ul>
+  <div class="row">
+    <div class="col-12">
+      
+      <ul class="header">
+        
+        <li class="header__item">
+          <a class="header__link" href="#">Features</a>
+        </li>
+        
+        <li class="header__item">
+          <a class="header__link" href="#">Funding</a>
+        </li>
+        
+        <li class="header__item">
+          <a class="header__link" href="#">FAQ</a>
+        </li>
+        
+        <li class="header__item">
+          <a class="header__link" href="#">Contact</a>
+        </li>
+        
+      </ul>
+
+    </div>
+  </div>
 </header>
 
 
@@ -49,7 +55,7 @@
 
   <div class="container page-index">
     <div class="row page-index__block page-index__block--jumbotron">
-      <div class="col-12">
+      <div class="col-12 page-index__homescreen">
         <div class="page-index__jumbotron">
           
 
@@ -70,80 +76,169 @@
 </form>
 
         </div>
-      </div>
-    </div>
 
-    <div class="row page-index__block page-index__block--instruction">
-      <div class="col-12">
-        
+        <div class="page-index__instruction">
+          
 
 <div class="instruction">
-  <h2 class="instruction__heading"><a data-toggle='["instruction-modal", "instruction-lining"]' class="instruction__heading-link" href="">How to become a witness<span class="instruction__heading-icon">?</span></a></h2>
+  <h2 class="instruction__heading"><a data-modal-toggler="instruction-modal" class="instruction__heading-link" href="">How to become a witness<span class="instruction__heading-icon">?</span></a></h2>
 
-  <div id="instruction-modal" class="instruction__modal">
-    <div class="instruction__guideline">
-      <button id="instruction-steps-prev" type="button" class="instruction__btn instruction__btn--left">previous step</button>
+  <div id="instruction-modal" class="instruction__guideline">
+    <button id="instruction-steps-prev" type="button" class="instruction__btn instruction__btn--left">previous step</button>
 
-      <div id="instruction-steps" class="swiper-container">
+    <div id="instruction-steps" class="swiper-container">
 
-        <ul class="swiper-wrapper instruction__steps">
-          <li class="swiper-slide">
-            <div class="step instruction__step">
-              <p class="step__paragraph">Install array-io node software</p>
+      <ul class="swiper-wrapper instruction__steps">
+        <li class="swiper-slide">
+          <div class="step instruction__step">
+            <p class="step__paragraph">Install array-io node software</p>
 
-              <p class="step__paragraph">
-                <a href="" class="link">
-                  <svg class="link__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="31" viewBox="0 0 32.58 31.77">
-                    <path fill-rule="evenodd" d="M16.29,0a16.29,16.29,0,0,0-5.15,31.75c.81.15,1.11-.35,1.11-.79s0-1.41,0-2.77C7.7,29.18,6.74,26,6.74,26a4.31,4.31,0,0,0-1.81-2.38c-1.48-1,.11-1,.11-1a3.42,3.42,0,0,1,2.5,1.68,3.47,3.47,0,0,0,4.74,1.35,3.48,3.48,0,0,1,1-2.18C9.7,23.08,5.9,21.68,5.9,15.44a6.3,6.3,0,0,1,1.68-4.37,5.86,5.86,0,0,1,.16-4.31s1.37-.44,4.48,1.67a15.44,15.44,0,0,1,8.16,0c3.11-2.11,4.48-1.67,4.48-1.67A5.85,5.85,0,0,1,25,11.07a6.29,6.29,0,0,1,1.67,4.37c0,6.26-3.81,7.63-7.44,8a3.89,3.89,0,0,1,1.11,3c0,2.18,0,3.93,0,4.47s.29.94,1.12.78A16.29,16.29,0,0,0,16.29,0Z" data-name="Layer 1"></path>
-                  </svg>
-                  <span class="link__text">GitHub</span>
-                </a>
-              </p>
-            </div>
-          </li>
+            <p class="step__paragraph">
+              <a href="" class="link">
+                <svg class="link__icon" xmlns="http://www.w3.org/2000/svg" width="32" height="31" viewBox="0 0 32.58 31.77">
+                  <path fill-rule="evenodd" d="M16.29,0a16.29,16.29,0,0,0-5.15,31.75c.81.15,1.11-.35,1.11-.79s0-1.41,0-2.77C7.7,29.18,6.74,26,6.74,26a4.31,4.31,0,0,0-1.81-2.38c-1.48-1,.11-1,.11-1a3.42,3.42,0,0,1,2.5,1.68,3.47,3.47,0,0,0,4.74,1.35,3.48,3.48,0,0,1,1-2.18C9.7,23.08,5.9,21.68,5.9,15.44a6.3,6.3,0,0,1,1.68-4.37,5.86,5.86,0,0,1,.16-4.31s1.37-.44,4.48,1.67a15.44,15.44,0,0,1,8.16,0c3.11-2.11,4.48-1.67,4.48-1.67A5.85,5.85,0,0,1,25,11.07a6.29,6.29,0,0,1,1.67,4.37c0,6.26-3.81,7.63-7.44,8a3.89,3.89,0,0,1,1.11,3c0,2.18,0,3.93,0,4.47s.29.94,1.12.78A16.29,16.29,0,0,0,16.29,0Z" data-name="Layer 1"></path>
+                </svg>
+                <span class="link__text">GitHub</span>
+              </a>
+            </p>
+          </div>
+        </li>
 
-          <li class="swiper-slide">
-            <div class="step instruction__step">
-              <p class="step__paragraph">If you’re using  MacOS, run the following command to ensure that you have everything a Linux user has.</p>
+        <li class="swiper-slide">
+          <div class="step instruction__step">
+            <p class="step__paragraph">If you’re using  MacOS, run the following command to ensure that you have everything a Linux user has.</p>
 
-              
+            
 
-              <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">$ cmake -DLINUX_SIGACTION_SIGSEGV=DISABLE ..</span></code></pre>
-            </div>
-          </li>
+            <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">$ cmake -DLINUX_SIGACTION_SIGSEGV=DISABLE ..</span></code></pre>
+          </div>
+        </li>
 
-          <li class="swiper-slide">
-            <div class="step instruction__step">
-              <p class="step__paragraph">You should be able to spawn four threads. Alternatively, if you process with eight cores, you can make eight threads. Choose it according to your core/CPU environment, so that it works efficiently.</p>
+        <li class="swiper-slide">
+          <div class="step instruction__step">
+            <p class="step__paragraph">You should be able to spawn four threads. Alternatively, if you process with eight cores, you can make eight threads. Choose it according to your core/CPU environment, so that it works efficiently.</p>
 
-              
+            
 
-              <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">$ make -j4</span></code></pre>
-            </div>
-          </li>
+            <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">$ make -j4</span></code></pre>
+          </div>
+        </li>
 
-          <li class="swiper-slide">
-            <div class="step instruction__step">
-              <p class="step__paragraph">Connect to ‘newton.array.io’ and create a wallet with a chain ID. After the build you will get access the ‘programs’ directory which contains CliWallet and WitnessNode.</p>
+        <li class="swiper-slide">
+          <div class="step instruction__step">
+            <p class="step__paragraph">Connect to ‘newton.array.io’ and create a wallet with a chain ID. After the build you will get access the ‘programs’ directory which contains CliWallet and WitnessNode.</p>
 
-              
+            
 
-              <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">$ ./programs/cli_wallet/cli_wallet -s ws://newton.array.io:8090 --chain-id b6b83a593686087531ce581540564d20b2f75ff9879e9dd2eccfa9a79744b949</span></code></pre>
-            </div>
-          </li>
-        </ul>
+            <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">$ ./programs/cli_wallet/cli_wallet -s ws://newton.array.io:8090 --chain-id b6b83a593686087531ce581540564d20b2f75ff9879e9dd2eccfa9a79744b949</span></code></pre>
+          </div>
+        </li>
 
-      </div>
+        <li class="swiper-slide">
+          <div class="step instruction__step">
+            <p class="step__paragraph">You’re almost there! Create a password for your brand-new wallet and unlock it. You will know that you’ve done this when the line says ‘unlocked’ instead of ‘locked’.</p>
 
-      <button id="instruction-steps-next" type="button" class="instruction__btn instruction__btn--right">next step</button>
+            
+
+            <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">locked &gt;&gt;&gt; set_password secret-password-here</span><span class="snippet__line">locked &gt;&gt;&gt; unlock secret-password-here</span><span class="snippet__line">unlocked &gt;&gt;&gt;</span></code></pre>
+          </div>
+        </li>
+
+        <li class="swiper-slide">
+          <div class="step instruction__step">
+            <p class="step__paragraph step__paragraph--margin--sm">Congrats! You have unlocked your wallet.</p>
+            <p class="step__paragraph step__paragraph--margin--sm">Now you can send us your account name and your public key, so that we could register your account.</p>
+            <p class="step__paragraph step__paragraph--margin--sm">To complete the registration of your account, you need to have some money in it.</p>
+            <p class="step__paragraph step__paragraph--margin--sm">We grant you <span class="step__emphasis">10000 RAY</span> to get you started</p>
+          </div>
+        </li>
+
+        <li class="swiper-slide">
+          <div class="step instruction__step">
+            <p class="step__paragraph">Generate a key pair</p>
+
+            <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">&gt;&gt; suggest_brain_key</span></code></pre>
+
+            <p class="step__paragraph">You will get an output of this kind:</p>
+
+            
+
+            <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">{</span><span class="snippet__line">  &quot;brain_priv_key&quot;: &quot;VOLET BUZZING BLASTID QUOITS RALPH WHIBA VAGUITY SONLIKE OUTGROW MISBORN CLOTBUR FRIZZER TONG DAND CARTER VERVAIN&quot;,</span><span class="snippet__line">  &quot;wif_priv_key&quot;: &quot;5KaGG9t31Ajmgkm1Y8ymHDGL4czn2Su2jbjKHoYy2fYkNSPjCM7&quot;,</span><span class="snippet__line">  &quot;pub_key&quot;: &quot;RAY5T5D5p3Cddo97tTA1d1iSKxHEMazthLtyUpiLpXu8rLYVyHxrH&quot;</span><span class="snippet__line">}</span></code></pre>
+          </div>
+        </li>
+
+        <li class="swiper-slide">
+          <div class="step instruction__step">
+            <p class="step__paragraph"><span class="step__emphasis">Memorize</span> the private key! It will be linked to the account that we create for you.</p>
+            <p class="step__paragraph"><span class="step__emphasis">Note: </span>The hash from the brain key gives you a private key. The hash of that hash produces a public key. If you lose a public key, you can get it from your private key. If you lose a private one, it can be accessed through the brain key.</p>
+          </div>
+        </li>
+
+        <li class="swiper-slide">
+          <div class="step instruction__step">
+            <p class="step__paragraph">Now you need to import your private key:</p>
+
+            <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">&gt;&gt; import_key my-very-new-account &lt;your private here&gt; </span></code></pre>
+          </div>
+        </li>
+
+        <li class="swiper-slide">
+          <div class="step instruction__step">
+            <p class="step__paragraph">To check the balance in all your accounts, you can do the following:</p>
+
+            <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">unlocked &gt;&gt;&gt; list_account_balances my-very-new-account, 1 </span></code></pre>
+          </div>
+        </li>
+
+        <li class="swiper-slide">
+          <div class="step instruction__step">
+            <p class="step__paragraph">You’ve nailed it! With a functioning account, it is easy to become a witness. Here is how you can do that:</p>
+
+            <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">unlocked &gt;&gt;&gt; create_witness my-very-new-account &quot;https://flacon.array.io&quot; true </span></code></pre>
+          </div>
+        </li>
+
+        <li class="swiper-slide">
+          <div class="step instruction__step">
+            <p class="step__paragraph">To get private keys for your witness, you should do</p>
+
+            <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">&gt;&gt; dump_private_keys </span></code></pre>
+          </div>
+        </li>
+
+        <li class="swiper-slide">
+          <div class="step instruction__step">
+            <p class="step__paragraph">To see the history of all the actions, simply type:</p>
+
+            <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">unlocked &gt;&gt;&gt; get_account_history flacon, 10 </span></code></pre>
+          </div>
+        </li>
+
+        <li class="swiper-slide">
+          <div class="step instruction__step">
+            <p class="step__paragraph">You can vote for your witness:</p>
+
+            <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">unlocked &gt;&gt;&gt; vote_for_witness my-very-new-account true </span></code></pre>
+          </div>
+        </li>
+
+        <li class="swiper-slide">
+          <div class="step instruction__step">
+            <p class="step__paragraph">To complete the process, you need to type in the following line. It is supposed to present all the information on your account that you have in the witness node.</p>
+
+            <pre class="snippet step__snippet"><code class="snippet__content"><span class="snippet__line">$ LC_ALL=C ./witness_node --data-dir=./newton --genesis-json=newton/main_genesis.json --rpc-endpoint=127.0.0.1:8090 --api-access=newton/api-access.json --witness-id &#39;&quot;1.5.22&quot;&#39; --private-key &#39;[&quot;RAY5xMr8JuFtDHCZ7wjKGUYksdsXREfcpxxcojjT371Qeo1F3MARL&quot;,&quot;5KbUiwxz2uh4tmcfaUKo1SVPrxg9MkxYJnqP2sYjchdTdSozZ6R&quot;]&#39; </span></code></pre>
+          </div>
+        </li>
+      </ul>
 
     </div>
+
+    <button id="instruction-steps-next" type="button" class="instruction__btn instruction__btn--right">next step</button>
+
   </div>
-
-  <div data-toggle='["instruction-modal", "instruction-lining"]' id="instruction-lining" class="instruction__lining"></div>
-
 </div>
 
+        </div>
       </div>
     </div>
 
@@ -159,12 +254,12 @@
   <ul class="features__list">
     <li class="features__item features__item--top">
       <span class="features__text">
-        A combination of a blockchain, backed by the Delegated Proof-of-Stake consensus algorithm, and the support for smart contracts
+        A combination of a blockchain backed by the Delegated Proof-of-Stake consensus algorithm and the support for smart contracts
       </span>
     </li>
     <li class="features__item features__item--middle">
       <span class="features__text">
-        Оffers an extensive toolkit that simpliﬁes the creation and deployment of DApps
+        Offers an extensive toolkit that simpliﬁes the creation and deployment of DApps
       </span>
     </li>
     <li class="features__item features__item--bottom">
@@ -184,15 +279,13 @@
           <img class="page-index__figure-img" src="" alt="" width="340" height="240">
         </div>
 
-        <p class="page-index__text">Snippet →  The Core is the undercurrent power that runs deep in any system and defines its capabilities. We’ve made speed and convenience our priorities. That is why our blockchain is based on DPoS (Delegated Proof-of-Stake) consensus algorithm that allows faster transactions and has the innate support for smart contracts written in Solidity. This way our blockchain confirms transactions faster, hence it executes contracts faster, as well as it brings blockchain technology closer to the real world use. As you read these lines, all the existing platforms are trying to fight the issue of slow transactions. But the blockchain world doesn’t have ready decisions yet because it falls into the trap of using the Etherium Virtual Machine (EVM). To fight this problem, we’ve built our own virtual machine (Array Virtual Machine or AVM) that performs actions faster (e.g. it executes smart contracts 25% faster than Python-based VMs).</p>
+        <p class="page-index__text">The Core is the undercurrent power that runs deep in any system and defines its capabilities. We’ve made speed and convenience our priorities. That is why our blockchain is based on DPoS (Delegated Proof-of-Stake) consensus algorithm, allowing significantly larger amount of transactions to be processed in comparison to the Proof-of-Work algorithm.  Additionally, it has an innate support for smart contracts written in Solidity, which brings our platform closer to the real-world use.</p>
       </div>
     </div>
 
     <div class="row page-index__block page-index__block--content">
       <div class="col-12 page-index__content">
-        <p class="page-index__text page-index__text--align--right">Snippet → about Developer tools:
-          The Array Platform allows developers to easily create their DApps using a set of tools which include a Software Development Kit, IDE plugins, Array.io Node all-in-one installation tool and the extensive documentation with tutorials and guidelines.
-          The SDK allows developers to create cross-blockchain applications with the support of atomic swaps, payment channels and the lightning network protocol. It consists of a smart contract compiler and debugger, as well as a set of APIs for cross-chain connectivity and IPFS interaction. IDE plugins offer easy-to-use environment for DApp-creation and deployment, while the Array.io Node installation tool enables you to connect to our blockchain very fast.</p>
+        <p class="page-index__text page-index__text--align--right">As you read these lines, all the existing platforms are trying to fight the issue of slow transactions. But the blockchain world doesn’t have ready decisions yet because it falls into the trap of using the Ethereum Virtual Machine (EVM). To fight this problem, we’ve built our own virtual machine (Array Virtual Machine or AVM) that performs actions faster. For example, it executes smart contracts 25% faster than Python-based VMs. AVM is written on Forth Language with few adaptations that make writing smart contracts more convenient.</p>
 
         <div class="page-index__figure">
           <img class="page-index__figure-img" src="" alt="" width="340" height="240">
@@ -207,18 +300,27 @@
           <img class="page-index__figure-img" src="assets/imgs/page-index-video-placeholder.jpg" alt="Video Placeholder" width="340" height="254">
         </div>
 
-        <p class="page-index__text">Snippet → Our client application has a user-friendly interface which gives access to the DApp marketplace and runs the installed DApps in an isolated environment. It has several components built in: Local Storage, IPFS, OrbitDB, and many more. We are using the IPFS protocol to give our users the safest way to store data. But if you wish to manage large amounts of data without persistent Internet connection, then you can use the Local Storage. The lite client is the manifestation of our philosophy of clarity that drives us to make complicated things easy and enjoyable for the user.</p>
+        <p class="page-index__text">The Array Platform allows developers to easily create DApps using a set of tools, which includes a software development kit (SDK), IDE plugins, Array.io Node all-in-one installation tool and the extensive documentation with tutorials and guidelines. Our SDK consists of a smart contract compiler and debugger, as well as a set of APIs for cross-chain connectivity and IPFS interaction. IDE plugins offer easy-to-use environment for DApp creation and deployment, while the Array.io Node installation tool enables you to instantly connect to our blockchain.</p>
       </div>
     </div>
 
     <div class="row page-index__block page-index__block--content">
       <div class="col-12 page-index__content">
-        <p class="page-index__text page-index__text--align--right">Snippet → Another factor that we value the most is security. We protect our users by providing them with two kinds of keys - public and private ones. To make our platform a safe and pleasant experience, we’ve created a shield called the Keychain.
-          Keychain is a system for creating and managing private keys, signing transactions, and encrypting the data. It supports various formats of private keys (e.g. ECDSA and RSA) and can be used by a node, a Client or a DApp's NodeJS server to sign transactions. It can also be used by a Web application to keep the keys in an isolated environment.</p>
+        <p class="page-index__text page-index__text--align--right">Our client application has a user-friendly interface which gives access to the DApp marketplace and runs the installed DApps in an isolated environment. It has several components built in: local storage, IPFS, keychain, OrbitDB, logger, and many more. These features are easily incorporated with the tools provided in the client SDK, which makes DApp development accessible for anyone.</p>
 
         <div class="page-index__figure">
           <img class="page-index__figure-img" src="" alt="" width="340" height="240">
         </div>
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--content">
+      <div class="col-12 page-index__content">
+        <div class="page-index__figure">
+          <img class="page-index__figure-img" src="" alt="" width="340" height="240">
+        </div>
+
+        <p class="page-index__text">To make usage of our platform a safe and pleasant experience, we’ve created a shield called the Keychain. It is an app to create and manage private/public key paris, sign transactions, and encrypt data with the keys. It is a standalone application that can be run in the command line or GUI mode.Our keychain supports various cryptographic algorithms (e.g. ECDSA, RSA, algorithms from the OpenSSL) and can manage private keys in different ways. It can be used by a node, a Client or a DApp's NodeJS server to sign transactions, as well as by a web application to keep the keys in an isolated environment.</p>
       </div>
     </div>
 
@@ -255,6 +357,8 @@
     </div>
   </div>
 
+
+  <div id="lining" class="lining"></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
