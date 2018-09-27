@@ -3,37 +3,74 @@
   align-items: stretch;
   flex-flow: row nowrap;
 
+  @keyframes cube-animation-open {
+    0% {
+      background-position: 50% 37%, 50% calc(50% + 12px), 50% 66%;
+    }
+
+    100% {
+      background-position: 50% 5px, 50% calc(50% + 12px), 50% 100%;
+    }
+  }
+
+  @keyframes cube-animation-levitate {
+    0% {
+      background-position: 50% 5px, 50% calc(50% + 12px), 50% 100%;
+    }
+
+    25% {
+      background-position: 50% 10px, 50% calc(50% + 12px), 50% calc(100% - 5px);
+    }
+
+    50% {
+      background-position: 50% 5px, 50% calc(50% + 12px), 50% calc(100% - 10px);
+    }
+
+    75% {
+      background-position: 50% 0px, 50% calc(50% + 12px), 50% calc(100% - 5px);
+    }
+
+    100% {
+      background-position: 50% 5px, 50% calc(50% + 12px), 50% 100%;
+    }
+  }
+
   &__img {
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
     justify-content: space-between;
 
-    height: 500px;
+    height: 440px;
+    width: 185px;
+    background-image: url('../assets/imgs/img-cube-part-top.png'), url('../assets/imgs/img-cube-part-middle.png'), url('../assets/imgs/img-cube-part-bottom.png');
+    background-position: 50% 37%, 50% calc(50% + 12px), 50% 66%;
+    background-repeat: no-repeat;
 
-    &-part {
-      width: 185px;
-      height: 135px;
+    &[data-animation-process="opening"] {
+      background-position: 50% 37%, 50% calc(50% + 12px), 50% 66%; // closed
+      animation-name: cube-animation-open;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+    }
 
-      background-repeat: no-repeat;
-      background-size: auto;
+    &[data-animation-process="closing"] {
+      background-position: 50% 5px, 50% calc(50% + 12px), 50% 100%; // closed
+      animation-name: cube-animation-open;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      animation-direction: reverse;
+    }
 
-      &--top {
-        margin-bottom: 15px;
-
-        background-image: url('../assets/imgs/img-cube-part-top.png');
-        background-position: center bottom;
-      }
-
-      &--middle {
-        background-image: url('../assets/imgs/img-cube-part-middle.png');
-        background-position: center center;
-      }
-
-      &--bottom {
-        background-image: url('../assets/imgs/img-cube-part-bottom.png');
-        background-position: center top;
-      }
+    &[data-animation-process="open"] {
+      // background-position: 50% 0, 50% calc(50% + 12px), 50% 100%; //opened
+      background-position: 50% 5px, 50% calc(50% + 12px), 50% 100%;
+      animation-name: cube-animation-levitate;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
     }
   }
 
@@ -74,6 +111,8 @@
 
     background-repeat: no-repeat;
     background-size: auto;
+
+    position: relative;
 
 
     &--top {

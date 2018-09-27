@@ -581,6 +581,42 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap; }
+
+@-webkit-keyframes cube-animation-open {
+  0% {
+    background-position: 50% 37%, 50% calc(50% + 12px), 50% 66%; }
+  100% {
+    background-position: 50% 5px, 50% calc(50% + 12px), 50% 100%; } }
+
+@keyframes cube-animation-open {
+  0% {
+    background-position: 50% 37%, 50% calc(50% + 12px), 50% 66%; }
+  100% {
+    background-position: 50% 5px, 50% calc(50% + 12px), 50% 100%; } }
+
+@-webkit-keyframes cube-animation-levitate {
+  0% {
+    background-position: 50% 5px, 50% calc(50% + 12px), 50% 100%; }
+  25% {
+    background-position: 50% 10px, 50% calc(50% + 12px), 50% calc(100% - 5px); }
+  50% {
+    background-position: 50% 5px, 50% calc(50% + 12px), 50% calc(100% - 10px); }
+  75% {
+    background-position: 50% 0px, 50% calc(50% + 12px), 50% calc(100% - 5px); }
+  100% {
+    background-position: 50% 5px, 50% calc(50% + 12px), 50% 100%; } }
+
+@keyframes cube-animation-levitate {
+  0% {
+    background-position: 50% 5px, 50% calc(50% + 12px), 50% 100%; }
+  25% {
+    background-position: 50% 10px, 50% calc(50% + 12px), 50% calc(100% - 5px); }
+  50% {
+    background-position: 50% 5px, 50% calc(50% + 12px), 50% calc(100% - 10px); }
+  75% {
+    background-position: 50% 0px, 50% calc(50% + 12px), 50% calc(100% - 5px); }
+  100% {
+    background-position: 50% 5px, 50% calc(50% + 12px), 50% 100%; } }
   .features__img {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -595,22 +631,42 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    height: 500px; }
-    .features__img-part {
-      width: 185px;
-      height: 135px;
-      background-repeat: no-repeat;
-      background-size: auto; }
-      .features__img-part--top {
-        margin-bottom: 15px;
-        background-image: url("../assets/imgs/img-cube-part-top.png");
-        background-position: center bottom; }
-      .features__img-part--middle {
-        background-image: url("../assets/imgs/img-cube-part-middle.png");
-        background-position: center center; }
-      .features__img-part--bottom {
-        background-image: url("../assets/imgs/img-cube-part-bottom.png");
-        background-position: center top; }
+    height: 440px;
+    width: 185px;
+    background-image: url("../assets/imgs/img-cube-part-top.png"), url("../assets/imgs/img-cube-part-middle.png"), url("../assets/imgs/img-cube-part-bottom.png");
+    background-position: 50% 37%, 50% calc(50% + 12px), 50% 66%;
+    background-repeat: no-repeat; }
+    .features__img[data-animation-process="opening"] {
+      background-position: 50% 37%, 50% calc(50% + 12px), 50% 66%;
+      -webkit-animation-name: cube-animation-open;
+              animation-name: cube-animation-open;
+      -webkit-animation-duration: 0.5s;
+              animation-duration: 0.5s;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards; }
+    .features__img[data-animation-process="closing"] {
+      background-position: 50% 5px, 50% calc(50% + 12px), 50% 100%;
+      -webkit-animation-name: cube-animation-open;
+              animation-name: cube-animation-open;
+      -webkit-animation-duration: 0.5s;
+              animation-duration: 0.5s;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      animation-direction: reverse; }
+    .features__img[data-animation-process="open"] {
+      background-position: 50% 5px, 50% calc(50% + 12px), 50% 100%;
+      -webkit-animation-name: cube-animation-levitate;
+              animation-name: cube-animation-levitate;
+      -webkit-animation-duration: 1s;
+              animation-duration: 1s;
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite; }
   .features__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -650,7 +706,8 @@ body {
     min-height: 135px;
     padding-left: 235px;
     background-repeat: no-repeat;
-    background-size: auto; }
+    background-size: auto;
+    position: relative; }
     .features__item--top {
       margin-top: 3px;
       background-image: url("../assets/imgs/img-line-part-top.png");
