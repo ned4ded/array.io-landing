@@ -2,6 +2,7 @@
   padding-bottom: 245px;
 
   &__jumbotron {
+    margin-bottom: 10px;
   }
 
   &__instruction {
@@ -22,8 +23,8 @@
     margin-left: auto;
   }
 
-  &__slogan {
-    margin: 17px 0 84px;
+  &__paragraph {
+    margin: 15px 0 0;
 
     text-align: center;
     letter-spacing: -1.2px;
@@ -32,7 +33,13 @@
 
     line-height: 1;
 
-    @include make-ff-nova(24px);
+    @include make-ff-nova(22px);
+
+    &--fz {
+      &--sm {
+        font-size: 16px;
+      }
+    }
   }
 
   &__request {
@@ -41,7 +48,7 @@
 
     width: 100%;
 
-    margin: 0 0 80px;
+    margin: 40px 0 100px;
   }
 
   &__block {
@@ -53,7 +60,7 @@
     }
 
     &--features {
-      margin: 120px 0;
+      margin: 0 0 120px;
     }
 
     &--content {
@@ -61,7 +68,11 @@
     }
 
     &--ido {
-      margin: 105px 0;
+      margin: 150px 0;
+    }
+
+    &--instruction {
+      margin: 150px 0;
     }
   }
 
@@ -70,19 +81,143 @@
     align-items: center;
     flex-flow: row nowrap;
     justify-content: space-around;
+
+    &--column {
+      flex-flow: column nowrap;
+    }
   }
 
   &__figure {
     background-color: #1c2b45;
 
-    &-img {
+    &--icon {
       display: block;
+      width: 166px;
+      height: 100%;
+      min-height: 165px;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-size: auto;
+      position: relative;
+
+      &:before {
+        display: none;
+        content: '';
+        width: 165px;
+        height: 165px;
+        border-radius: 100%;
+        background-color: rgba(249, 249, 249, .15);
+        position: absolute;
+        filter: blur(25px);
+        z-index: -1;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+      }
+
+      &--core {
+        background-image: url('../assets/imgs/icon-content-core.png');
+        background-position: left center;
+
+        &:before {
+          display: block;
+          left: 66px;
+        }
+      }
+
+      &--vm {
+        background-image: url('../assets/imgs/icon-content-vm.png');
+        background-position: right center;
+
+        &:before {
+          display: block;
+          top: 45%;
+          left: 55%;
+          transform: translate(-50%, -50%);
+          filter: blur(40px);
+        }
+      }
+
+      &--keys {
+        background-image: url('../assets/imgs/icon-content-keys.png');
+        background-position: left center;
+
+        &:before {
+          display: block;
+          left: 83px;
+          filter: blur(40px);
+        }
+      }
+    }
+
+    &--video {
+      position: relative;
+      z-index: 0;
+      margin: 20px 0 40px;
     }
   }
 
+  &__player {
+    width: 471px;
+    height: 345px;
+    position: relative;
+    z-index: 0;
+  }
+
+  &__placeholder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: url('../assets/imgs/page-index-video-placeholder.jpg');
+    background-size: 471px 345px;
+    cursor: pointer;
+
+    @keyframes video-placeholder-fade {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    &[data-video-player-state="playing"] {
+      display: block;
+      animation-name: video-placeholder-fade;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+    }
+
+    &[data-video-player-state="pausing"] {
+      display: block;
+      animation-name: video-placeholder-fade;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      animation-direction: reverse;
+    }
+
+    &[data-video-player-state="pause"] {
+      display: block;
+    }
+
+    &[data-video-player-state="play"] {
+      display: none;
+    }
+
+    .no-js & {
+      display: none;
+    }
+  }
+
+
+
   &__text {
-    width: 380px;
-    margin: 0;
+    width: 585px;
+    margin: 15px 0;
 
     white-space: pre-line;
     letter-spacing: -0.8px;
@@ -95,10 +230,18 @@
 
     text-align: justify;
 
-    // &--align {
-    //   &--right {
-    //     text-align: right;
-    //   }
-    // }
+    &--align {
+      // &--right {
+      //   text-align: right;
+      // }
+
+      &--center {
+        text-align: center;
+      }
+    }
+
+    &--wide {
+      width: 100%;
+    }
   }
 }

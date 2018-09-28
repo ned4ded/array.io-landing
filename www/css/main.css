@@ -154,7 +154,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
   min-height: 60px;
   margin: 0;
   padding: 0;
@@ -373,100 +372,110 @@ body {
   .step__emphasis {
     color: #5ea6fb; }
 
-.instruction {
+.instruction__heading {
+  margin: 0; }
+
+.instruction__link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-decoration: none;
+  letter-spacing: -0.8px;
+  color: #e0e0e0;
+  line-height: 30px;
+  cursor: pointer;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal; }
+  .instruction__link-container {
+    text-align: center; }
+  .instruction__link-icon {
+    position: relative;
+    font-size: 0;
+    display: inline-block;
+    width: 27px;
+    height: 100%;
+    margin: 0 10px; }
+    .instruction__link-icon:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      -webkit-transition: opacity .3s ease-in;
+      transition: opacity .3s ease-in;
+      opacity: 0;
+      background-image: url("../assets/imgs/icon-question-mark-white.png");
+      background-repeat: no-repeat;
+      background-size: auto; }
+    .instruction__link-icon:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      -webkit-transition: opacity .3s ease-in;
+      transition: opacity .3s ease-in;
+      opacity: 1;
+      background-image: url("../assets/imgs/icon-question-mark.png");
+      background-repeat: no-repeat;
+      background-size: auto; }
+  .instruction__link:hover .instruction__link-icon:after {
+    -webkit-transition: opacity .1s ease-in;
+    transition: opacity .1s ease-in;
+    opacity: 0; }
+  .instruction__link:hover .instruction__link-icon:before {
+    -webkit-transition: opacity .1s ease-in;
+    transition: opacity .1s ease-in;
+    opacity: 1; }
+
+.instruction__paragraph {
+  display: block;
+  letter-spacing: -0.8px;
+  line-height: 1;
+  color: #e0e0e0;
+  margin: 20px 0;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal; }
+  .instruction__paragraph:first-child {
+    margin-top: 0; }
+  .instruction__paragraph:last-child {
+    margin-bottom: 0; }
+  .instruction__paragraph--align--center {
+    text-align: center; }
+
+.instruction__guideline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap; }
-  .instruction__heading {
-    margin: 0; }
-    .instruction__heading-link {
-      display: -webkit-inline-box;
-      display: -ms-inline-flexbox;
-      display: inline-flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      text-decoration: none;
-      letter-spacing: -0.8px;
-      color: #e0e0e0;
-      line-height: 30px;
-      cursor: pointer;
-      font-family: "Proxima Nova", sans-serif;
-      font-size: 16px;
-      font-weight: 400;
-      font-style: normal; }
-    .instruction__heading-icon {
-      position: relative;
-      font-size: 0;
-      display: inline-block;
-      width: 27px;
-      height: 100%;
-      margin: 0 5px; }
-      .instruction__heading-icon:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        content: '';
-        -webkit-transition: opacity .3s ease-in;
-        transition: opacity .3s ease-in;
-        opacity: 0;
-        background-image: url("../assets/imgs/icon-question-mark-white.png");
-        background-repeat: no-repeat;
-        background-size: auto; }
-      .instruction__heading-icon:after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        content: '';
-        -webkit-transition: opacity .3s ease-in;
-        transition: opacity .3s ease-in;
-        opacity: 1;
-        background-image: url("../assets/imgs/icon-question-mark.png");
-        background-repeat: no-repeat;
-        background-size: auto; }
-    .instruction__heading:hover .instruction__heading-icon:after {
-      -webkit-transition: opacity .1s ease-in;
-      transition: opacity .1s ease-in;
-      opacity: 0; }
-    .instruction__heading:hover .instruction__heading-icon:before {
-      -webkit-transition: opacity .1s ease-in;
-      transition: opacity .1s ease-in;
-      opacity: 1; }
-  .instruction__guideline {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 710px;
-    margin: 25px 0 0;
-    border: 1px solid #4d59a1;
-    border-radius: 4px;
-    background-color: #04142e;
-    -webkit-box-shadow: 0px 0px 5px 5px #193359, 0px 0px 13px 7px rgba(94, 166, 251, 0.2);
-            box-shadow: 0px 0px 5px 5px #193359, 0px 0px 13px 7px rgba(94, 166, 251, 0.2);
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    z-index: 10; }
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 710px;
+  margin: 25px 0 0;
+  border: 1px solid #4d59a1;
+  border-radius: 4px;
+  background-color: #04142e;
+  -webkit-box-shadow: 0px 0px 5px 5px #193359, 0px 0px 13px 7px rgba(94, 166, 251, 0.2);
+          box-shadow: 0px 0px 5px 5px #193359, 0px 0px 13px 7px rgba(94, 166, 251, 0.2);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10; }
 
 @-webkit-keyframes guideline-modal {
   0% {
@@ -487,88 +496,90 @@ body {
   100% {
     opacity: 1;
     top: 50%; } }
-    .no-js .instruction__guideline {
-      display: none; }
-    .instruction__guideline[data-modal-state="opening"] {
-      opacity: 0;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      top: 35%;
-      -webkit-animation-name: guideline-modal;
-              animation-name: guideline-modal;
-      -webkit-animation-duration: .5s;
-              animation-duration: .5s;
-      -webkit-animation-fill-mode: forwards;
-              animation-fill-mode: forwards;
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out; }
-    .instruction__guideline[data-modal-state="open"] {
-      top: 50%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      opacity: 1; }
-    .instruction__guideline[data-modal-state="closing"] {
-      opacity: 1;
-      top: 50%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-animation-name: guideline-modal;
-              animation-name: guideline-modal;
-      animation-direction: reverse;
-      -webkit-animation-duration: .5s;
-              animation-duration: .5s;
-      -webkit-animation-fill-mode: forwards;
-              animation-fill-mode: forwards;
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out; }
-    .instruction__guideline[data-modal-state="closed"] {
-      display: none; }
-  .instruction__steps {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-  .instruction__btn {
-    display: block;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    padding: 0;
-    line-height: 30px;
-    min-width: 18.3%;
-    color: white;
-    cursor: pointer;
-    font-family: "Proxima Nova", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    font-style: normal; }
-    .instruction__btn:active {
-      padding: 0; }
-    .instruction__btn--left {
-      margin-left: 20px;
-      padding-left: 20px;
-      text-align: left;
-      background-image: url("../assets/imgs/icon-modal-arrow-prev.png");
-      background-repeat: no-repeat;
-      background-position: left calc(50% + 2px);
-      background-size: auto; }
-      .instruction__btn--left:active {
-        padding-left: 20px; }
-    .instruction__btn--right {
-      padding-right: 20px;
-      text-align: right;
-      margin-right: 20px;
-      background-image: url("../assets/imgs/icon-modal-arrow-next.png");
-      background-repeat: no-repeat;
-      background-size: auto;
-      background-position: right calc(50% + 2px); }
-      .instruction__btn--right:active {
-        padding-right: 20px; }
+  .no-js .instruction__guideline {
+    display: none; }
+  .instruction__guideline[data-modal-state="opening"] {
+    opacity: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 35%;
+    -webkit-animation-name: guideline-modal;
+            animation-name: guideline-modal;
+    -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+  .instruction__guideline[data-modal-state="open"] {
+    top: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1; }
+  .instruction__guideline[data-modal-state="closing"] {
+    opacity: 1;
+    top: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-animation-name: guideline-modal;
+            animation-name: guideline-modal;
+    animation-direction: reverse;
+    -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+  .instruction__guideline[data-modal-state="closed"] {
+    display: none; }
+
+.instruction__steps {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.instruction__btn {
+  display: block;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  line-height: 30px;
+  min-width: 18.3%;
+  color: white;
+  cursor: pointer;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal; }
+  .instruction__btn:active {
+    padding: 0; }
+  .instruction__btn--left {
+    margin-left: 20px;
+    padding-left: 20px;
+    text-align: left;
+    background-image: url("../assets/imgs/icon-modal-arrow-prev.png");
+    background-repeat: no-repeat;
+    background-position: left calc(50% + 2px);
+    background-size: auto; }
+    .instruction__btn--left:active {
+      padding-left: 20px; }
+  .instruction__btn--right {
+    padding-right: 20px;
+    text-align: right;
+    margin-right: 20px;
+    background-image: url("../assets/imgs/icon-modal-arrow-next.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right calc(50% + 2px); }
+    .instruction__btn--right:active {
+      padding-right: 20px; }
 
 .features {
   display: -webkit-box;
@@ -692,7 +703,7 @@ body {
     background-clip: text;
     line-height: 1.3;
     font-family: "Proxima Nova", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     font-style: normal; }
   .features__item {
@@ -836,6 +847,8 @@ body {
 
 .page-index {
   padding-bottom: 245px; }
+  .page-index__jumbotron {
+    margin-bottom: 10px; }
   .page-index__instruction {
     margin: 0; }
   .page-index__homescreen {
@@ -854,16 +867,18 @@ body {
     display: block;
     margin-right: auto;
     margin-left: auto; }
-  .page-index__slogan {
-    margin: 17px 0 84px;
+  .page-index__paragraph {
+    margin: 15px 0 0;
     text-align: center;
     letter-spacing: -1.2px;
     color: #c1c1c1;
     line-height: 1;
     font-family: "Proxima Nova", sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
     font-style: normal; }
+    .page-index__paragraph--fz--sm {
+      font-size: 16px; }
   .page-index__request {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -872,13 +887,15 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     width: 100%;
-    margin: 0 0 80px; }
+    margin: 40px 0 100px; }
   .page-index__block--features {
-    margin: 120px 0; }
+    margin: 0 0 120px; }
   .page-index__block--content {
     margin: 75px 0; }
   .page-index__block--ido {
-    margin: 105px 0; }
+    margin: 150px 0; }
+  .page-index__block--instruction {
+    margin: 150px 0; }
   .page-index__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -892,13 +909,118 @@ body {
             flex-flow: row nowrap;
     -ms-flex-pack: distribute;
         justify-content: space-around; }
+    .page-index__content--column {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column nowrap;
+              flex-flow: column nowrap; }
   .page-index__figure {
     background-color: #1c2b45; }
-    .page-index__figure-img {
+    .page-index__figure--icon {
+      display: block;
+      width: 166px;
+      height: 100%;
+      min-height: 165px;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-size: auto;
+      position: relative; }
+      .page-index__figure--icon:before {
+        display: none;
+        content: '';
+        width: 165px;
+        height: 165px;
+        border-radius: 100%;
+        background-color: rgba(249, 249, 249, 0.15);
+        position: absolute;
+        -webkit-filter: blur(25px);
+                filter: blur(25px);
+        z-index: -1;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+      .page-index__figure--icon--core {
+        background-image: url("../assets/imgs/icon-content-core.png");
+        background-position: left center; }
+        .page-index__figure--icon--core:before {
+          display: block;
+          left: 66px; }
+      .page-index__figure--icon--vm {
+        background-image: url("../assets/imgs/icon-content-vm.png");
+        background-position: right center; }
+        .page-index__figure--icon--vm:before {
+          display: block;
+          top: 45%;
+          left: 55%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+          -webkit-filter: blur(40px);
+                  filter: blur(40px); }
+      .page-index__figure--icon--keys {
+        background-image: url("../assets/imgs/icon-content-keys.png");
+        background-position: left center; }
+        .page-index__figure--icon--keys:before {
+          display: block;
+          left: 83px;
+          -webkit-filter: blur(40px);
+                  filter: blur(40px); }
+    .page-index__figure--video {
+      position: relative;
+      z-index: 0;
+      margin: 20px 0 40px; }
+  .page-index__player {
+    width: 471px;
+    height: 345px;
+    position: relative;
+    z-index: 0; }
+  .page-index__placeholder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: url("../assets/imgs/page-index-video-placeholder.jpg");
+    background-size: 471px 345px;
+    cursor: pointer; }
+
+@-webkit-keyframes video-placeholder-fade {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes video-placeholder-fade {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+    .page-index__placeholder[data-video-player-state="playing"] {
+      display: block;
+      -webkit-animation-name: video-placeholder-fade;
+              animation-name: video-placeholder-fade;
+      -webkit-animation-duration: .5s;
+              animation-duration: .5s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards; }
+    .page-index__placeholder[data-video-player-state="pausing"] {
+      display: block;
+      -webkit-animation-name: video-placeholder-fade;
+              animation-name: video-placeholder-fade;
+      -webkit-animation-duration: .5s;
+              animation-duration: .5s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      animation-direction: reverse; }
+    .page-index__placeholder[data-video-player-state="pause"] {
       display: block; }
+    .page-index__placeholder[data-video-player-state="play"] {
+      display: none; }
+    .no-js .page-index__placeholder {
+      display: none; }
   .page-index__text {
-    width: 380px;
-    margin: 0;
+    width: 585px;
+    margin: 15px 0;
     white-space: pre-line;
     letter-spacing: -0.8px;
     color: #e0e0e0;
@@ -908,3 +1030,7 @@ body {
     font-weight: 400;
     font-style: normal;
     text-align: justify; }
+    .page-index__text--align--center {
+      text-align: center; }
+    .page-index__text--wide {
+      width: 100%; }

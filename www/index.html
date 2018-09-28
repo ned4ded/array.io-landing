@@ -63,29 +63,137 @@
         <div class="page-index__jumbotron">
           
 
-          <img class="page-index__logotype" src="assets/imgs/logo-array-smaller.png" alt="Array.io Logotype" width="375" height="394">
+          <img class="page-index__logotype" src="assets/imgs/logo-array-smaller.png" alt="Array.io Logotype" width="250" height="263">
         </div>
 
-        <p class="page-index__slogan">
-          A client for your DApps.
+        <p class="page-index__paragraph">
+          New DApp environment
+        </p>
+        <p class="page-index__paragraph page-index__paragraph--fz--sm">
+          Simple. Fast. Decentralized
         </p>
 
         <div class="page-index__request">
           <form class="request" action="/" method="post">
   <div class="request__container">
     <input class="request__input" type="email" name="email" required placeholder="Your Email">
-    <button class="request__submit" type="submit">Send request</button>
+    <button class="request__submit" type="submit">Subscribe</button>
   </div>
 
 </form>
 
         </div>
+      </div>
+    </div>
 
-        <div class="page-index__instruction">
-          
+    <div id="about-section" class="row page-index__block page-index__block--features">
+      <div class="col-12">
+        <div class="features">
+  <div data-animation-process="closed" class="features__img"></div>
+
+  <ul class="features__list">
+    <li class="features__item features__item--top">
+      <span class="features__text">
+        A combination of a blockchain backed by the Delegated Proof-of-Stake consensus algorithm and the support for smart contracts
+      </span>
+    </li>
+    <li class="features__item features__item--middle">
+      <span class="features__text">
+        Offers an extensive toolkit that simpliﬁes the creation and deployment of DApps
+      </span>
+    </li>
+    <li class="features__item features__item--bottom">
+      <span class="features__text">
+        A marketplace with a user-friendly lite client that breaks down the entry barriers for regular users into the world of decentralized applications
+      </span>
+    </li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <div id="features-section" class="row page-index__block page-index__block--content">
+      <div class="col-12 page-index__content">
+        <span class="page-index__figure page-index__figure--icon page-index__figure--icon--core" data-levitate></span>
+
+        <p class="page-index__text">The Core is the undercurrent power that runs deep in any system and defines its capabilities. We’ve made speed and convenience our priorities. That is why our blockchain is based on DPoS (Delegated Proof-of-Stake) consensus algorithm, allowing significantly larger amount of transactions to be processed in comparison to the Proof-of-Work algorithm.  Additionally, it has an innate support for smart contracts written in Solidity, which brings our platform closer to the real-world use.</p>
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--content">
+      <div class="col-12 page-index__content">
+        <p class="page-index__text page-index__text--align--right">As you read these lines, all the existing platforms are trying to fight the issue of slow transactions. But the blockchain world doesn’t have ready decisions yet because it falls into the trap of using the Ethereum Virtual Machine (EVM). To fight this problem, we’ve built our own virtual machine (Array Virtual Machine or AVM) that performs actions faster. For example, it executes smart contracts 25% faster than Python-based VMs. AVM is written on Forth Language with few adaptations that make writing smart contracts more convenient.</p>
+
+        <span class="page-index__figure page-index__figure--icon page-index__figure--icon--vm" data-levitate></span>
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--content">
+      <div class="col-12 page-index__content">
+        <span class="page-index__figure page-index__figure--icon page-index__figure--icon--keys" data-levitate></span>
+
+        <p class="page-index__text">To make usage of our platform a safe and pleasant experience, we’ve created a shield called the Keychain. It is an app to create and manage private/public key paris, sign transactions, and encrypt data with the keys. It is a standalone application that can be run in the command line or GUI mode.Our keychain supports various cryptographic algorithms (e.g. ECDSA, RSA, algorithms from the OpenSSL) and can manage private keys in different ways. It can be used by a node, a Client or a DApp's NodeJS server to sign transactions, as well as by a web application to keep the keys in an isolated environment.</p>
+      </div>
+    </div>
+
+    <div class="row page-index__block page-index__block--content">
+      <div class="col-12 page-index__content page-index__content--column">
+        
+        <div class="page-index__figure page-index__figure--video">
+          <iframe id="video-player" class="page-index__player" width="640" height="360" src="https://www.youtube.com/embed/NkzKD8c-Sdo?enablejsapi=1&color=white&modestbranding=1&rel=0" frameborder="0"></iframe>
+          <div id="video-toggler" class="page-index__placeholder"></div>
+        </div>
+
+        <p class="page-index__text page-index__text--wide page-index__text--align--center">The Array Platform allows developers to easily create DApps using a set of tools, which includes a software development kit (SDK), IDE plugins, Array.io Node all-in-one installation tool and the extensive documentation with tutorials and guidelines. Our SDK consists of a smart contract compiler and debugger, as well as a set of APIs for cross-chain connectivity and IPFS interaction. IDE plugins offer easy-to-use environment for DApp creation and deployment, while the Array.io Node installation tool enables you to instantly connect to our blockchain.</p>
+
+        <p class="page-index__text page-index__text--wide page-index__text--align--center">Our client application has a user-friendly interface which gives access to the DApp marketplace and runs the installed DApps in an isolated environment. It has several components built in: local storage, IPFS, keychain, OrbitDB, logger, and many more. These features are easily incorporated with the tools provided in the client SDK, which makes DApp development accessible for anyone.</p>
+      </div>
+    </div>
+
+    <div id="ido-section" class="row page-index__block page-index__block--ido">
+      <div class="col-12">
+        <div class="ido">
+  <h2 class="ido__paragraph ido__paragraph--align--center">IDO  (Initial Development Offering)</h2>
+  <p id="ido-less" data-visible="true" class="ido__paragraph ido__paragraph--align--center">A novel blockchain project requires not only the cutting-edge development ideas, but also the right attitude to fundraising. Initial Development Oﬀering, or IDO, is an innovative approach to attract investments, that is deemed fair for all parties involved. Although it has some features of the ICO (i.e. the distribution of tokens among the project backers in return for their ETH), the core ideas of IDO are quite different.</p>
+
+  <div data-visible="false" data-toggle='["ido-toggle-btn", "ido-more", "ido-less"]' id="ido-more" class="ido__more">
+    <p class="ido__paragraph">
+      Unlike the ICOs that present a completely unrealistic roadmap and request to have all the resources in advance, IDO’s funding model is designed to be more adaptive to the realities of the software development process and catering to both the contributors’ desires and the project team.
+    </p>
+
+    <p class="ido__paragraph">
+      Our funding model introduces the concept of Token Generation Rounds (TGRs). Stages of a TGR are equally spaced time intervals that determine the split percentage of the minted IDO tokens according to a simple principle: “The later the stage, the larger the contributor’s share”. Price-wise it means that ‘early birds’ get less tokens for the same amount of contribution, which might make the investor wait for the last stage. However, the investors are motivated to get into the project early on since TGRs have a maxcap that could be hit at any time, closing the whole round.
+    </p>
+
+    <p class="ido__paragraph">
+      Unlike ICO, initial development tokens are refundable by unlocking the same amount of ETH which is then transferred back to the account that initiated the return. A particular part of the tokens can be exchanged back (burned) to retrieve the funds.
+    </p>
+
+    <p class="ido__paragraph">
+      Array.io is the first project to be funded through the IDO. We believe that at the moment it is the perfectly responsible way of fundraising, and in the future will become the common practice for attracting investments not only in blockchain projects but overall in software development.
+    </p>
+  </div>
+
+  <div class="ido__btn-container">
+    <a id="ido-toggle-btn" data-visible="true" data-toggle='["ido-toggle-btn", "ido-more", "ido-less"]' href="#ido-more" class="ido__btn"><span class="ido__btn-text">learn more</span></a>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <div id="witness-section" class="row page-index__block page-index__block--instruction">
+      <div class="col-12">
+        
 
 <div class="instruction">
-  <h2 class="instruction__heading"><a data-modal-toggler="instruction-modal" class="instruction__heading-link" href="">How to become a witness<span class="instruction__heading-icon">?</span></a></h2>
+  <h2 class="instruction__paragraph instruction__paragraph--align--center">Become a Witness</h2>
+  <p class="instruction__paragraph instruction__paragraph--align--center">Delegated Proof of Stake consensus algorithm requires validation of blocks by special nodes we call Delegates. DPoS is significantly faster and less prone to cartelization than Proof of Work algorithm. You have the opportunity to become an Array Witness and later a Delegate who validates new blocks.</p>
+
+  <div class="ido__btn-container">
+    <a data-modal-toggler="instruction-modal" href="#" class="ido__btn"><span class="ido__btn-text">learn more</span></a>
+  </div>
 
   <div id="instruction-modal" class="instruction__guideline">
     <button id="instruction-steps-prev" type="button" class="instruction__btn instruction__btn--left">previous step</button>
@@ -239,117 +347,6 @@
 
     <button id="instruction-steps-next" type="button" class="instruction__btn instruction__btn--right">next step</button>
 
-  </div>
-</div>
-
-        </div>
-      </div>
-    </div>
-
-    <div id="about-section" class="row page-index__block page-index__block--features">
-      <div class="col-12">
-        <div class="features">
-  <div data-animation-process="closed" class="features__img"></div>
-
-  <ul class="features__list">
-    <li class="features__item features__item--top">
-      <span class="features__text">
-        A combination of a blockchain backed by the Delegated Proof-of-Stake consensus algorithm and the support for smart contracts
-      </span>
-    </li>
-    <li class="features__item features__item--middle">
-      <span class="features__text">
-        Offers an extensive toolkit that simpliﬁes the creation and deployment of DApps
-      </span>
-    </li>
-    <li class="features__item features__item--bottom">
-      <span class="features__text">
-        A marketplace with a user-friendly lite client that breaks down the entry barriers for regular users into the world of decentralized applications
-      </span>
-    </li>
-  </ul>
-</div>
-
-      </div>
-    </div>
-
-    <div id="features-section" class="row page-index__block page-index__block--content">
-      <div class="col-12 page-index__content">
-        <div class="page-index__figure">
-          <img class="page-index__figure-img" src="" alt="" width="340" height="240">
-        </div>
-
-        <p class="page-index__text">The Core is the undercurrent power that runs deep in any system and defines its capabilities. We’ve made speed and convenience our priorities. That is why our blockchain is based on DPoS (Delegated Proof-of-Stake) consensus algorithm, allowing significantly larger amount of transactions to be processed in comparison to the Proof-of-Work algorithm.  Additionally, it has an innate support for smart contracts written in Solidity, which brings our platform closer to the real-world use.</p>
-      </div>
-    </div>
-
-    <div class="row page-index__block page-index__block--content">
-      <div class="col-12 page-index__content">
-        <p class="page-index__text page-index__text--align--right">As you read these lines, all the existing platforms are trying to fight the issue of slow transactions. But the blockchain world doesn’t have ready decisions yet because it falls into the trap of using the Ethereum Virtual Machine (EVM). To fight this problem, we’ve built our own virtual machine (Array Virtual Machine or AVM) that performs actions faster. For example, it executes smart contracts 25% faster than Python-based VMs. AVM is written on Forth Language with few adaptations that make writing smart contracts more convenient.</p>
-
-        <div class="page-index__figure">
-          <img class="page-index__figure-img" src="" alt="" width="340" height="240">
-        </div>
-      </div>
-    </div>
-
-    <div class="row page-index__block page-index__block--content">
-      <div class="col-12 page-index__content">
-        
-        <div class="page-index__figure">
-          <img class="page-index__figure-img" src="assets/imgs/page-index-video-placeholder.jpg" alt="Video Placeholder" width="340" height="254">
-        </div>
-
-        <p class="page-index__text">The Array Platform allows developers to easily create DApps using a set of tools, which includes a software development kit (SDK), IDE plugins, Array.io Node all-in-one installation tool and the extensive documentation with tutorials and guidelines. Our SDK consists of a smart contract compiler and debugger, as well as a set of APIs for cross-chain connectivity and IPFS interaction. IDE plugins offer easy-to-use environment for DApp creation and deployment, while the Array.io Node installation tool enables you to instantly connect to our blockchain.</p>
-      </div>
-    </div>
-
-    <div class="row page-index__block page-index__block--content">
-      <div class="col-12 page-index__content">
-        <p class="page-index__text page-index__text--align--right">Our client application has a user-friendly interface which gives access to the DApp marketplace and runs the installed DApps in an isolated environment. It has several components built in: local storage, IPFS, keychain, OrbitDB, logger, and many more. These features are easily incorporated with the tools provided in the client SDK, which makes DApp development accessible for anyone.</p>
-
-        <div class="page-index__figure">
-          <img class="page-index__figure-img" src="" alt="" width="340" height="240">
-        </div>
-      </div>
-    </div>
-
-    <div class="row page-index__block page-index__block--content">
-      <div class="col-12 page-index__content">
-        <div class="page-index__figure">
-          <img class="page-index__figure-img" src="" alt="" width="340" height="240">
-        </div>
-
-        <p class="page-index__text">To make usage of our platform a safe and pleasant experience, we’ve created a shield called the Keychain. It is an app to create and manage private/public key paris, sign transactions, and encrypt data with the keys. It is a standalone application that can be run in the command line or GUI mode.Our keychain supports various cryptographic algorithms (e.g. ECDSA, RSA, algorithms from the OpenSSL) and can manage private keys in different ways. It can be used by a node, a Client or a DApp's NodeJS server to sign transactions, as well as by a web application to keep the keys in an isolated environment.</p>
-      </div>
-    </div>
-
-    <div id="ido-section" class="row page-index__block page-index__block--ido">
-      <div class="col-12">
-        <div class="ido">
-  <p class="ido__paragraph ido__paragraph--align--center">IDO  (Initial Development Offering)</p>
-  <p id="ido-less" data-visible="true" class="ido__paragraph ido__paragraph--align--center">A novel blockchain project requires not only the cutting-edge development ideas, but also the right attitude to fundraising. Initial Development Oﬀering, or IDO, is an innovative approach to attract investments, that is deemed fair for all parties involved. Although it has some features of the ICO (i.e. the distribution of tokens among the project backers in return for their ETH), the core ideas of IDO are quite different.</p>
-
-  <div data-visible="false" data-toggle='["ido-toggle-btn", "ido-more", "ido-less"]' id="ido-more" class="ido__more">
-    <p class="ido__paragraph">
-      Unlike the ICOs that present a completely unrealistic roadmap and request to have all the resources in advance, IDO’s funding model is designed to be more adaptive to the realities of the software development process and catering to both the contributors’ desires and the project team.
-    </p>
-
-    <p class="ido__paragraph">
-      Our funding model introduces the concept of Token Generation Rounds (TGRs). Stages of a TGR are equally spaced time intervals that determine the split percentage of the minted IDO tokens according to a simple principle: “The later the stage, the larger the contributor’s share”. Price-wise it means that ‘early birds’ get less tokens for the same amount of contribution, which might make the investor wait for the last stage. However, the investors are motivated to get into the project early on since TGRs have a maxcap that could be hit at any time, closing the whole round.
-    </p>
-
-    <p class="ido__paragraph">
-      Unlike ICO, initial development tokens are refundable by unlocking the same amount of ETH which is then transferred back to the account that initiated the return. A particular part of the tokens can be exchanged back (burned) to retrieve the funds.
-    </p>
-
-    <p class="ido__paragraph">
-      Array.io is the first project to be funded through the IDO. We believe that at the moment it is the perfectly responsible way of fundraising, and in the future will become the common practice for attracting investments not only in blockchain projects but overall in software development.
-    </p>
-  </div>
-
-  <div class="ido__btn-container">
-    <a id="ido-toggle-btn" data-visible="true" data-toggle='["ido-toggle-btn", "ido-more", "ido-less"]' href="#ido-more" class="ido__btn"><span class="ido__btn-text">learn more</span></a>
   </div>
 </div>
 

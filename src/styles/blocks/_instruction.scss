@@ -1,25 +1,25 @@
 .instruction {
-  align-items: center;
-  display: flex;
-  flex-flow: column nowrap;
-
   &__heading {
     margin: 0;
+  }
 
-    &-link {
-      display: inline-flex;
-      align-items: center;
+  &__link {
+    display: inline-flex;
+    align-items: center;
 
-      text-decoration: none;
-      letter-spacing: -0.8px;
+    text-decoration: none;
+    letter-spacing: -0.8px;
 
-      color: #e0e0e0;
+    color: #e0e0e0;
 
-      line-height: 30px;
+    line-height: 30px;
 
-      cursor: pointer;
+    cursor: pointer;
 
-      @include make-ff-nova(16px);
+    @include make-ff-nova(16px);
+
+    &-container {
+      text-align: center;
     }
 
     &-icon {
@@ -29,7 +29,7 @@
       width: 27px;
       height: 100%;
 
-      margin: 0 5px;
+      margin: 0 10px;
 
       &:before {
         position: absolute;
@@ -80,6 +80,31 @@
     }
   }
 
+
+  &__paragraph {
+    display: block;
+    letter-spacing: -0.8px;
+    line-height: 1;
+    color: #e0e0e0;
+    margin: 20px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include make-ff-nova(16px);
+
+    &--align {
+      &--center {
+        text-align: center;
+      }
+    }
+  }
+
   &__guideline {
     @keyframes guideline-modal {
       0% {
@@ -96,6 +121,7 @@
         top: 50%;
       }
     }
+
     display: flex;
     // display: none;
     flex-flow: row nowrap;
