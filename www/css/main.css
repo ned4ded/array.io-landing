@@ -406,18 +406,16 @@ body {
       background-image: url("../assets/imgs/browser-header-tools-sm.png");
       background-size: 300px 41px; }
   .browser__body {
-    padding: 7px 10px;
     border-radius: 0 0 6px 6px;
     background-color: #ebebeb;
     -webkit-box-shadow: inset 0px 3px 5px -2px rgba(0, 0, 0, 0.1);
             box-shadow: inset 0px 3px 5px -2px rgba(0, 0, 0, 0.1); }
   .browser__form {
-    position: relative;
-    padding: 18px 0 10px; }
+    position: relative; }
   .browser__player {
     display: block;
-    width: 426px;
-    height: 240px;
+    width: 638px;
+    height: 440px;
     margin: 0 auto;
     border: 15px solid black;
     border-top-width: 2px;

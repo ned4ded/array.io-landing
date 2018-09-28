@@ -18,5 +18,9 @@
   {
     "name" : "instagram",
     "ref" : "//www.instagram.com/array.io/"
+  },
+  {
+    "name" : "stackoverflow",
+    "ref" : "//stackoverflow.com/users/10429540/array-io"
   }
 ]
