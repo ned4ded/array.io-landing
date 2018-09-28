@@ -185,7 +185,13 @@ body {
       text-shadow: 0 0 3px rgba(94, 166, 251, 0.4), 0 0 7px rgba(94, 166, 251, 0.25); }
 
 .footer__socials {
-  min-height: 80px; }
+  min-height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
 
 .footer__email {
   min-height: 80px;
@@ -194,10 +200,7 @@ body {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
+          align-items: center; }
   .footer__email-link {
     color: white;
     font-family: "Proxima Nova", sans-serif;
@@ -399,10 +402,7 @@ body {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  display: flex; }
   .socials__item {
     margin: 0 10px; }
     .socials__item:first-child {
