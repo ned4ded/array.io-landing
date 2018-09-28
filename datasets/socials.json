@@ -1,0 +1,22 @@
+[
+  {
+    "name" : "medium",
+    "ref" : "//medium.com/array-io"
+  },
+  {
+    "name" : "twitter",
+    "ref" : "//twitter.com/ProjectArray"
+  },
+  {
+    "name" : "telegram",
+    "ref" : "//t.me/arrayio"
+  },
+  {
+    "name" : "github",
+    "ref" : "//github.com/arrayio"
+  },
+  {
+    "name" : "instagram",
+    "ref" : "//www.instagram.com/array.io/"
+  }
+]

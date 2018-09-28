@@ -1,0 +1,17 @@
+.footer {
+  &__socials {
+    min-height: 80px;
+  }
+
+  &__email {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &-link {
+      color: white;
+      @include make-ff-nova(15px);
+    }
+  }
+}

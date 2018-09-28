@@ -1,0 +1,20 @@
+{% import "partials/social-icons.njk" as icons %}
+
+{% set socials = datasets.get('socials') %}
+
+<footer id="contact-section" class="footer container">
+  <div class="row">
+    <div class="col-6">
+      <ul class="footer__socials socials">
+        {% for item in socials %}
+        <li class="socials__item">
+          <a href="{{ item.ref }}" class="socials__link socials__link--{{ item.name }}"><span class="socials__link-text">{{ item.name }}</span><span class="socials__link-icon">{{ icons.make(item.name) }}</span></a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-6 footer__email">
+      <a href="mailto:info@array.io" class="footer__email-link">info@array.io</a>
+    </div>
+  </div>
+</footer>
