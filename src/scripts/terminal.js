@@ -1,158 +1,158 @@
-class VidePlayer {
-  constructor(frame, toggler, timeline = 500) {
-    this.frame = frame;
-    this.toggler = toggler;
-    this.timeline = 500;
+// class VidePlayer {
+//   constructor(frame, toggler, timeline = 500) {
+//     this.frame = frame;
+//     this.toggler = toggler;
+//     this.timeline = 500;
+//
+//     this.loaded = false;
+//     this.busy = false;
+//
+//     this.setState('loading');
+//
+//     this.frameID = frame.getAttribute('id');
+//     if(!this.frameID) throw new Error('VideoPlayer: Specify frame ID');
+//   }
+//
+//   setState(state) {
+//     switch (state) {
+//       case 'loading':
+//         this.state = 'loading';
+//         break;
+//       case 'pause':
+//         this.state = 'pause';
+//         break;
+//       case 'play':
+//         this.state = 'play';
+//         break;
+//       case 'pausing':
+//         this.state = 'pausing';
+//         break;
+//       case 'playing':
+//         this.state = 'playing';
+//         break;
+//       default:
+//         return new Error('VideoPlayer: Wrong State');
+//     }
+//
+//     this.notify();
+//
+//     return this;
+//   }
+//
+//   notify() {
+//     this.frame.dataset.videoPlayerState = this.state;
+//     this.toggler.dataset.videoPlayerState = this.state;
+//   }
+//
+//   getState() {
+//     return this.state;
+//   }
+//
+//   isState(state) {
+//     return this.getState() === state;
+//   }
+//
+//   isBusy() {
+//     return !!this.busy;
+//   }
+//
+//   occupy() {
+//     this.busy = true;
+//   }
+//
+//   vacate() {
+//     this.busy = false;
+//   }
+//
+//   load() {
+//     if(this.loaded) return;
+//
+//     this.loaded = true;
+//
+//     const onPlayerReady = (ev) => {
+//       this.setState('pause');
+//
+//       this.toggler.addEventListener('click', this.play.bind(true));
+//
+//       return;
+//     };
+//
+//     const onPlayerStateChange = (ev) => {
+//       if(ev.data === YT.PlayerState.PAUSED || ev.data === YT.PlayerState.ENDED) {
+//         return this.pause(false);
+//       } else if(ev.data === YT.PlayerState.PLAYING) {
+//         return this.play(false);
+//       }
+//
+//       return;
+//     }
+//
+//     this.player = new YT.Player(this.frame, {
+//       events: {
+//         'onReady': onPlayerReady,
+//         'onStateChange': onPlayerStateChange
+//       }
+//     });
+//
+//     return this;
+//   }
+//
+//   play = (startPlaying, cb = () => {}) => {
+//     if(this.isState('play') || this.isBusy() || !this.loaded) return false;
+//
+//     this.occupy();
+//     this.setState('playing');
+//
+//     if(startPlaying) this.player.playVideo();
+//
+//     setTimeout(() => {
+//       this.setState('play');
+//       this.vacate();
+//
+//
+//       return cb();
+//     }, this.timeline);
+//
+//     return this;
+//
+//     return;
+//   }
+//
+//   pause = (pausePlaying, cb = () => {}) => {
+//     if(this.isState('pause') || this.isBusy() || !this.loaded) return false;
+//
+//     if(pausePlaying) this.player.pauseVideo();
+//
+//     this.occupy();
+//     this.setState('pausing');
+//
+//     setTimeout(() => {
+//       this.setState('pause');
+//       this.vacate();
+//
+//       return cb();
+//     }, this.timeline);
+//
+//     return this;
+//
+//     return;
+//   }
+// }
+//
+// const playerElements = (() => {
+//   let player = document.getElementById('video-player');
+//   let toggler = document.getElementById('video-toggler');
+//
+//   if(!toggler | !player) return undefined;
+//
+//   return { player, toggler };
+// })();
+//
+// const player = new VidePlayer(playerElements.player, playerElements.toggler);
 
-    this.loaded = false;
-    this.busy = false;
-
-    this.setState('loading');
-
-    this.frameID = frame.getAttribute('id');
-    if(!this.frameID) throw new Error('VideoPlayer: Specify frame ID');
-  }
-
-  setState(state) {
-    switch (state) {
-      case 'loading':
-        this.state = 'loading';
-        break;
-      case 'pause':
-        this.state = 'pause';
-        break;
-      case 'play':
-        this.state = 'play';
-        break;
-      case 'pausing':
-        this.state = 'pausing';
-        break;
-      case 'playing':
-        this.state = 'playing';
-        break;
-      default:
-        return new Error('VideoPlayer: Wrong State');
-    }
-
-    this.notify();
-
-    return this;
-  }
-
-  notify() {
-    this.frame.dataset.videoPlayerState = this.state;
-    this.toggler.dataset.videoPlayerState = this.state;
-  }
-
-  getState() {
-    return this.state;
-  }
-
-  isState(state) {
-    return this.getState() === state;
-  }
-
-  isBusy() {
-    return !!this.busy;
-  }
-
-  occupy() {
-    this.busy = true;
-  }
-
-  vacate() {
-    this.busy = false;
-  }
-
-  load() {
-    if(this.loaded) return;
-
-    this.loaded = true;
-
-    const onPlayerReady = (ev) => {
-      this.setState('pause');
-
-      this.toggler.addEventListener('click', this.play.bind(true));
-
-      return;
-    };
-
-    const onPlayerStateChange = (ev) => {
-      if(ev.data === YT.PlayerState.PAUSED || ev.data === YT.PlayerState.ENDED) {
-        return this.pause(false);
-      } else if(ev.data === YT.PlayerState.PLAYING) {
-        return this.play(false);
-      }
-
-      return;
-    }
-
-    this.player = new YT.Player(this.frame, {
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
-      }
-    });
-
-    return this;
-  }
-
-  play = (startPlaying, cb = () => {}) => {
-    if(this.isState('play') || this.isBusy() || !this.loaded) return false;
-
-    this.occupy();
-    this.setState('playing');
-
-    if(startPlaying) this.player.playVideo();
-
-    setTimeout(() => {
-      this.setState('play');
-      this.vacate();
-
-
-      return cb();
-    }, this.timeline);
-
-    return this;
-
-    return;
-  }
-
-  pause = (pausePlaying, cb = () => {}) => {
-    if(this.isState('pause') || this.isBusy() || !this.loaded) return false;
-
-    if(pausePlaying) this.player.pauseVideo();
-
-    this.occupy();
-    this.setState('pausing');
-
-    setTimeout(() => {
-      this.setState('pause');
-      this.vacate();
-
-      return cb();
-    }, this.timeline);
-
-    return this;
-
-    return;
-  }
-}
-
-const playerElements = (() => {
-  let player = document.getElementById('video-player');
-  let toggler = document.getElementById('video-toggler');
-
-  if(!toggler | !player) return undefined;
-
-  return { player, toggler };
-})();
-
-const player = new VidePlayer(playerElements.player, playerElements.toggler);
-
-function onYouTubeIframeAPIReady() {
-  player.load();
-};
+// function onYouTubeIframeAPIReady() {
+//   player.load();
+// };
 
 
 document.addEventListener('DOMContentLoaded', (() => {
@@ -534,17 +534,17 @@ document.addEventListener('DOMContentLoaded', (() => {
   const links = Array.from( document.querySelectorAll('[data-smooth-scroll]') )
     .forEach(e => new SmoothScroll(e));
 
-  (function() {
-    if(!player) return;
-
-    const tag = document.createElement('script');
-    tag.src = '//www.youtube.com/iframe_api';
-
-    const firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    return;
-  }());
+  // (function() {
+  //   if(!player) return;
+  //
+  //   const tag = document.createElement('script');
+  //   tag.src = '//www.youtube.com/iframe_api';
+  //
+  //   const firstScriptTag = document.getElementsByTagName('script')[0];
+  //   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  //
+  //   return;
+  // }());
 
   const icons = Array.from( document.querySelectorAll('[data-levitate]') ).reduce((acc, cur) => {
     setTimeout(() => {

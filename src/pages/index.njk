@@ -58,15 +58,11 @@
 
     <div class="row page-index__block page-index__block--content">
       <div class="col-12 page-index__content page-index__content--column">
-        {% set video = assets['video-placeholder'] %}
-        <div class="page-index__figure page-index__figure--video">
-          <iframe id="video-player" class="page-index__player" width="640" height="360" src="https://www.youtube.com/embed/NkzKD8c-Sdo?enablejsapi=1&color=white&modestbranding=1&rel=0" frameborder="0"></iframe>
-          <div id="video-toggler" class="page-index__placeholder"></div>
-        </div>
-
         <p class="page-index__text page-index__text--wide page-index__text--align--center">The Array Platform allows developers to easily create DApps using a set of tools, which includes a software development kit (SDK), IDE plugins, Array.io Node all-in-one installation tool and the extensive documentation with tutorials and guidelines. Our SDK consists of a smart contract compiler and debugger, as well as a set of APIs for cross-chain connectivity and IPFS interaction. IDE plugins offer easy-to-use environment for DApp creation and deployment, while the Array.io Node installation tool enables you to instantly connect to our blockchain.</p>
 
         <p class="page-index__text page-index__text--wide page-index__text--align--center">Our client application has a user-friendly interface which gives access to the DApp marketplace and runs the installed DApps in an isolated environment. It has several components built in: local storage, IPFS, keychain, OrbitDB, logger, and many more. These features are easily incorporated with the tools provided in the client SDK, which makes DApp development accessible for anyone.</p>
+        
+        {% include "partials/browser.njk" %}
       </div>
     </div>
 
