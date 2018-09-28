@@ -946,6 +946,9 @@ body {
       background-image: url("../assets/imgs/img-line-part-bottom.png");
       background-position: 10px calc(100% - 7px); }
 
+.ido {
+  min-height: 160px; }
+
 @-webkit-keyframes more-block-animation-forward {
   0% {
     height: 0; }
@@ -977,120 +980,118 @@ body {
     height: 0; }
   100% {
     display: none; } }
-
-.ido__more {
-  display: none;
-  border-radius: 7px;
-  max-width: 955px;
-  padding: 20px 30px;
-  margin: 0 auto;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#031026), to(#020b1a));
-  background-image: linear-gradient(to top, #031026, #020b1a);
-  -webkit-box-shadow: 0px 0px 5px 6px rgba(94, 166, 251, 0.4);
-          box-shadow: 0px 0px 5px 6px rgba(94, 166, 251, 0.4);
-  position: relative;
-  cursor: pointer; }
-  .ido__more-wrapper {
-    overflow: hidden; }
-  .ido__more[data-visible="true"] {
-    display: block; }
-  .ido__more[data-visible="false"] {
-    display: none; }
-  .ido__more:before {
+  .ido__more {
+    display: none;
+    border-radius: 7px;
+    max-width: 955px;
+    margin: 0 auto;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#031026), to(#020b1a));
+    background-image: linear-gradient(to top, #031026, #020b1a);
+    -webkit-box-shadow: 0px 0px 5px 6px rgba(94, 166, 251, 0.4);
+            box-shadow: 0px 0px 5px 6px rgba(94, 166, 251, 0.4);
+    position: relative;
+    cursor: pointer; }
+    .ido__more-wrapper {
+      overflow: hidden;
+      height: 100%;
+      padding: 20px 30px; }
+    .ido__more[data-visible="true"] {
+      display: block; }
+    .ido__more[data-visible="false"] {
+      display: none; }
+    .ido__more:before {
+      display: block;
+      width: 38px;
+      height: 21px;
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 50%;
+      -webkit-transform: translate(-50%, -100%);
+              transform: translate(-50%, -100%);
+      background-image: url("../assets/imgs/ido-icon-more.png"); }
+  .ido__paragraph {
     display: block;
-    width: 38px;
-    height: 21px;
-    content: '';
-    position: absolute;
-    top: 1px;
-    left: 50%;
-    -webkit-transform: translate(-50%, -100%);
-            transform: translate(-50%, -100%);
-    background-image: url("../assets/imgs/ido-icon-more.png"); }
-
-.ido__paragraph {
-  display: block;
-  letter-spacing: -0.8px;
-  line-height: 1.3;
-  color: #e0e0e0;
-  margin: 20px 0;
-  font-family: "Proxima Nova", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal; }
-  .ido__paragraph:first-child {
-    margin-top: 0; }
-  .ido__paragraph:last-child {
-    margin-bottom: 0; }
-  .ido__paragraph[data-visible="false"] {
-    display: none; }
-  .ido__paragraph--align--center {
-    text-align: center; }
-
-.ido__btn {
-  display: inline-block;
-  text-decoration: none;
-  position: relative;
-  z-index: 0;
-  color: white;
-  border-radius: 3px;
-  -webkit-transition: -webkit-box-shadow .3s ease-in;
-  transition: -webkit-box-shadow .3s ease-in;
-  transition: box-shadow .3s ease-in;
-  transition: box-shadow .3s ease-in, -webkit-box-shadow .3s ease-in;
-  -webkit-box-shadow: 0px 0px 30px 25px rgba(29, 39, 56, 0.75), 0px 0px 15px 10px #1d2738;
-          box-shadow: 0px 0px 30px 25px rgba(29, 39, 56, 0.75), 0px 0px 15px 10px #1d2738;
-  font-family: "Proxima Nova", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal; }
-  .ido__btn:before {
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    border-radius: 3px;
-    z-index: -1;
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#2f4bd6), to(#5ea6fb));
-    background-image: linear-gradient(to top, #2f4bd6, #5ea6fb);
-    content: '';
-    opacity: 1;
-    -webkit-box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
-            box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
-    -webkit-transition: all .3s ease-in;
-    transition: all .3s ease-in; }
-  .ido__btn:active {
-    -webkit-box-shadow: 0px 0px 30px 25px rgba(29, 39, 56, 0), 0px 0px 15px 10px transparent;
-            box-shadow: 0px 0px 30px 25px rgba(29, 39, 56, 0), 0px 0px 15px 10px transparent;
-    -webkit-transition: -webkit-box-shadow .1s ease-in;
-    transition: -webkit-box-shadow .1s ease-in;
-    transition: box-shadow .1s ease-in;
-    transition: box-shadow .1s ease-in, -webkit-box-shadow .1s ease-in; }
-    .ido__btn:active:before {
-      -webkit-box-shadow: inset 0px 2px 0.79px 0.21px rgba(0, 0, 0, 0.24);
-              box-shadow: inset 0px 2px 0.79px 0.21px rgba(0, 0, 0, 0.24);
-      opacity: 0;
-      -webkit-transition: all .1s ease-in;
-      transition: all .1s ease-in; }
-  .ido__btn[data-visible="false"] {
-    display: none; }
-  .ido__btn-container {
-    text-align: center;
-    margin-top: 25px; }
-  .ido__btn-text {
+    letter-spacing: -0.8px;
+    line-height: 1.3;
+    color: #e0e0e0;
+    margin: 20px 0;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal; }
+    .ido__paragraph:first-child {
+      margin-top: 0; }
+    .ido__paragraph:last-child {
+      margin-bottom: 0; }
+    .ido__paragraph[data-visible="false"] {
+      display: none; }
+    .ido__paragraph--align--center {
+      text-align: center; }
+  .ido__btn {
     display: inline-block;
-    line-height: 32px;
+    text-decoration: none;
+    position: relative;
+    z-index: 0;
+    color: white;
     border-radius: 3px;
-    padding: 0px 15px;
-    background-color: #1d2739;
-    -webkit-transition: all .3s ease-in;
-    transition: all .3s ease-in;
-    min-width: 140px; }
-  .ido__btn:active .ido__btn-text {
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    background-color: #021330; }
+    -webkit-transition: -webkit-box-shadow .3s ease-in;
+    transition: -webkit-box-shadow .3s ease-in;
+    transition: box-shadow .3s ease-in;
+    transition: box-shadow .3s ease-in, -webkit-box-shadow .3s ease-in;
+    -webkit-box-shadow: 0px 0px 30px 25px rgba(29, 39, 56, 0.75), 0px 0px 15px 10px #1d2738;
+            box-shadow: 0px 0px 30px 25px rgba(29, 39, 56, 0.75), 0px 0px 15px 10px #1d2738;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal; }
+    .ido__btn:before {
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      border-radius: 3px;
+      z-index: -1;
+      background-image: -webkit-gradient(linear, left bottom, left top, from(#2f4bd6), to(#5ea6fb));
+      background-image: linear-gradient(to top, #2f4bd6, #5ea6fb);
+      content: '';
+      opacity: 1;
+      -webkit-box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+              box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+      -webkit-transition: all .3s ease-in;
+      transition: all .3s ease-in; }
+    .ido__btn:active {
+      -webkit-box-shadow: 0px 0px 30px 25px rgba(29, 39, 56, 0), 0px 0px 15px 10px transparent;
+              box-shadow: 0px 0px 30px 25px rgba(29, 39, 56, 0), 0px 0px 15px 10px transparent;
+      -webkit-transition: -webkit-box-shadow .1s ease-in;
+      transition: -webkit-box-shadow .1s ease-in;
+      transition: box-shadow .1s ease-in;
+      transition: box-shadow .1s ease-in, -webkit-box-shadow .1s ease-in; }
+      .ido__btn:active:before {
+        -webkit-box-shadow: inset 0px 2px 0.79px 0.21px rgba(0, 0, 0, 0.24);
+                box-shadow: inset 0px 2px 0.79px 0.21px rgba(0, 0, 0, 0.24);
+        opacity: 0;
+        -webkit-transition: all .1s ease-in;
+        transition: all .1s ease-in; }
+    .ido__btn[data-visible="false"] {
+      display: none; }
+    .ido__btn-container {
+      text-align: center;
+      margin-top: 25px; }
+    .ido__btn-text {
+      display: inline-block;
+      line-height: 32px;
+      border-radius: 3px;
+      padding: 0px 15px;
+      background-color: #1d2739;
+      -webkit-transition: all .3s ease-in;
+      transition: all .3s ease-in;
+      min-width: 140px; }
+    .ido__btn:active .ido__btn-text {
+      -webkit-transition: all .1s ease-in;
+      transition: all .1s ease-in;
+      background-color: #021330; }
 
 .page-index {
   padding-bottom: 150px; }

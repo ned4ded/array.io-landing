@@ -168,15 +168,28 @@ document.addEventListener('DOMContentLoaded', (() => {
   const toggle = function (cb, el) {
     el.dataset.visible = true;
 
-    anime({
-      targets: el,
-      opacity: [0, 1],
-      duration: 500,
-      easing: 'linear',
-      complete: function(anim) {
-        cb();
-      }
-    })
+    if(el.getAttribute('id') == 'ido-more') {
+      anime({
+        targets: el,
+        opacity: [0, 1],
+        height: [0, 350],
+        duration: 500,
+        easing: 'linear',
+        complete: function(anim) {
+          cb();
+        }
+      })
+    } else {
+      anime({
+        targets: el,
+        opacity: [0, 1],
+        duration: 500,
+        easing: 'linear',
+        complete: function(anim) {
+          cb();
+        }
+      })
+    }
 
     return;
   }
@@ -192,6 +205,7 @@ document.addEventListener('DOMContentLoaded', (() => {
         opacity: [1, 0],
         duration: 500,
         easing: 'linear',
+        height: (toggler.getAttribute('id') == 'ido-more') ? [350, 0] : null,
         complete: function(anim) {
           toggler.dataset.visible = false;
 
