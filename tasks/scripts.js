@@ -11,7 +11,7 @@ module.exports = (browserSync) => gulp.task('scripts', function() {
     .pipe(sourcemaps.init())
     .pipe(babel({
       presets: ['env'],
-      plugins: ["transform-object-rest-spread"]
+      plugins: ["transform-object-rest-spread", "transform-class-properties"]
     }))
     .pipe(concat('main.js'))
     .pipe(uglify())

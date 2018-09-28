@@ -25,23 +25,27 @@
 <header class="container">
   <div class="row">
     <div class="col-12">
-      
+
       <ul class="header">
         
         <li class="header__item">
-          <a class="header__link" href="#">Features</a>
+          <a data-smooth-scroll class="header__link" href="#about-section">About</a>
         </li>
         
         <li class="header__item">
-          <a class="header__link" href="#">Funding</a>
+          <a data-smooth-scroll class="header__link" href="#features-section">Features</a>
         </li>
         
         <li class="header__item">
-          <a class="header__link" href="#">FAQ</a>
+          <a data-smooth-scroll class="header__link" href="#ido-section">IDO</a>
         </li>
         
         <li class="header__item">
-          <a class="header__link" href="#">Contact</a>
+          <a data-smooth-scroll class="header__link" href="#witness-section">Witness</a>
+        </li>
+        
+        <li class="header__item">
+          <a data-smooth-scroll class="header__link" href="#contact-section">Contact</a>
         </li>
         
       </ul>
@@ -242,18 +246,34 @@
       </div>
     </div>
 
-    <div class="row page-index__block page-index__block--features">
+    <div id="about-section" class="row page-index__block page-index__block--features">
       <div class="col-12">
         <div class="features">
   <div data-animation-process="closed" class="features__img"></div>
 
-  
+  <ul class="features__list">
+    <li class="features__item features__item--top">
+      <span class="features__text">
+        A combination of a blockchain backed by the Delegated Proof-of-Stake consensus algorithm and the support for smart contracts
+      </span>
+    </li>
+    <li class="features__item features__item--middle">
+      <span class="features__text">
+        Offers an extensive toolkit that simpliﬁes the creation and deployment of DApps
+      </span>
+    </li>
+    <li class="features__item features__item--bottom">
+      <span class="features__text">
+        A marketplace with a user-friendly lite client that breaks down the entry barriers for regular users into the world of decentralized applications
+      </span>
+    </li>
+  </ul>
 </div>
 
       </div>
     </div>
 
-    <div class="row page-index__block page-index__block--content">
+    <div id="features-section" class="row page-index__block page-index__block--content">
       <div class="col-12 page-index__content">
         <div class="page-index__figure">
           <img class="page-index__figure-img" src="" alt="" width="340" height="240">
@@ -304,7 +324,7 @@
       </div>
     </div>
 
-    <div class="row page-index__block page-index__block--ido">
+    <div id="ido-section" class="row page-index__block page-index__block--ido">
       <div class="col-12">
         <div class="ido">
   <p class="ido__paragraph ido__paragraph--align--center">IDO  (Initial Development Offering)</p>

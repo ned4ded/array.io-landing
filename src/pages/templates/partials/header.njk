@@ -3,11 +3,11 @@
 <header class="container">
   <div class="row">
     <div class="col-12">
-      
+
       <ul class="header">
         {% for link in links %}
         <li class="header__item">
-          <a class="header__link" href="{{ link.ref }}">{{ link.name }}</a>
+          <a data-smooth-scroll class="header__link" href="{{ link.ref }}">{{ link.name }}</a>
         </li>
         {% endfor %}
       </ul>

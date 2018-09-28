@@ -288,7 +288,6 @@ document.addEventListener('DOMContentLoaded', (() => {
 
     window.removeEventListener('scroll', changeCubeState);
 
-
     if(cube.isState('closed') && getCubePosition(top, height) === 'in') {
       cube.open(() => {
         changeCubeState();
@@ -310,20 +309,63 @@ document.addEventListener('DOMContentLoaded', (() => {
 
   changeCubeState();
 
-  const path = anime.path('#cube-path-top');
+  class SmoothScroll {
+    constructor(link) {
+      this.link = link;
 
-  anime({
-    targets: '#cube-path-top',
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: 'easeInOutSine',
-    duration: 1500,
-    delay: function(el, i) { return i * 250 },
-  });
+      const attr = this.link.getAttribute('href');
 
-  anime({
-    targets: '#cube-point-top',
-    cx: path('x'), // Follow the x values from the path `Object`
-    cy: path('y'), // Follow the y values from the path `Object`
-  })
+      if(!attr || attr.slice(0, 1) !== '#') throw new Error('SmoothScroll: Wrong element passed');
+
+      this.target = document.getElementById( attr.slice(1) );
+
+      this.animation = anime({
+        targets: [document.body, document.documentElement],
+        scrollTop: this.getCurrentPosition(),
+        duration: 600,
+        easing: "easeInOutQuart",
+        autoplay: false,
+        complete: () => {
+          window.removeEventListener("wheel", this.pause);
+          window.removeEventListener("touchstart", this.pause);
+        }
+      });
+
+      this.link.addEventListener('click', (ev) => {
+        ev.preventDefault();
+
+        this.go();
+      });
+    }
+
+    getCurrentPosition() {
+      return this.target ? (window.scrollY || document.documentElement.scrollTop) + this.target.getBoundingClientRect().top : 0;
+    }
+
+    go() {
+      window.addEventListener("wheel", this.pause);
+      window.addEventListener("touchstart", this.pause);
+
+      this.animation.restart();
+
+      return;
+    }
+
+    pause = () => {
+      this.animation.pause();
+
+      window.removeEventListener("wheel", this.pause);
+      window.removeEventListener("touchstart", this.pause);
+
+      return;
+    }
+
+
+  }
+
+  const links = Array.from( document.querySelectorAll('[data-smooth-scroll]') )
+    .forEach(e => new SmoothScroll(e));
+
+  console.log(links);
 
 }), false);
