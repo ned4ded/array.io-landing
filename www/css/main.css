@@ -345,8 +345,6 @@ body {
   width: 100%;
   max-width: 640px;
   margin: 50px 0 0;
-  max-height: 450px;
-  overflow: hidden;
   border-top: 1px solid rgba(0, 0, 32, 0.1);
   border-right: 1px solid rgba(0, 0, 32, 0.1);
   border-bottom: 1px solid rgba(0, 0, 32, 0.1);
