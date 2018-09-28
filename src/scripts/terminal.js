@@ -158,34 +158,65 @@
 document.addEventListener('DOMContentLoaded', (() => {
   document.querySelector('html').classList.remove('no-js');
 
-  const pairs = Array.from( document.querySelectorAll('[data-toggle]') ).map(toggler => {
-    const ids = JSON.parse(toggler.dataset.toggle);
+  const pairs = Array.from( document.querySelectorAll('[data-toggle-on]') ).map(toggler => {
+    const onIds = toggler.dataset.toggleOn ? JSON.parse(toggler.dataset.toggleOn) : [];
+    const offIds = toggler.dataset.toggleOff ? JSON.parse(toggler.dataset.toggleOff) : [];
 
-    const togglees = ids.map(i => document.getElementById(i));
-
-    return { toggler, togglees };
+    return { toggler, on: onIds.map(i => document.getElementById(i)), off: offIds.map(i => document.getElementById(i)) };
   });
 
-  const toggle = (el) => {
-    if(el.dataset.visible == 'true') {
-      el.dataset.visible = false;
-
-      return;
-    }
-
+  const toggle = function (cb, el) {
     el.dataset.visible = true;
+
+    anime({
+      targets: el,
+      opacity: [0, 1],
+      duration: 500,
+      easing: 'linear',
+      complete: function(anim) {
+        cb();
+      }
+    })
 
     return;
   }
 
-  pairs.forEach(({ toggler, togglees }) => {
-    toggler.addEventListener('click', (ev) => {
+  pairs.forEach(({ toggler, on, off }) => {
+    const handler = (ev) => {
       ev.preventDefault();
 
-      togglees.forEach(toggle);
+      toggler.removeEventListener('click', handler);
+
+      anime({
+        targets: toggler,
+        opacity: [1, 0],
+        duration: 500,
+        easing: 'linear',
+        complete: function(anim) {
+          toggler.dataset.visible = false;
+
+          const listener = () => {
+            toggler.addEventListener('click', handler);
+          };
+
+          on.forEach(toggle.bind(null, listener));
+        }
+      })
+
+      off.forEach(e => anime({
+        targets: e,
+        opacity: [1, 0],
+        duration: 500,
+        easing: 'linear',
+        complete: function(anim) {
+          e.dataset.visible = false;
+        }
+      }))
 
       return;
-    });
+    };
+
+    toggler.addEventListener('click', handler);
   });
 
   const instruction = document.getElementById('instruction-steps');

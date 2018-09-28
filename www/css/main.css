@@ -946,6 +946,38 @@ body {
       background-image: url("../assets/imgs/img-line-part-bottom.png");
       background-position: 10px calc(100% - 7px); }
 
+@-webkit-keyframes more-block-animation-forward {
+  0% {
+    height: 0; }
+  100% {
+    height: 100%; } }
+
+@keyframes more-block-animation-forward {
+  0% {
+    height: 0; }
+  100% {
+    height: 100%; } }
+
+@-webkit-keyframes more-block-animation-reverse {
+  0% {
+    height: 100%;
+    display: block; }
+  99% {
+    display: block;
+    height: 0; }
+  100% {
+    display: none; } }
+
+@keyframes more-block-animation-reverse {
+  0% {
+    height: 100%;
+    display: block; }
+  99% {
+    display: block;
+    height: 0; }
+  100% {
+    display: none; } }
+
 .ido__more {
   display: none;
   border-radius: 7px;
@@ -958,6 +990,8 @@ body {
           box-shadow: 0px 0px 5px 6px rgba(94, 166, 251, 0.4);
   position: relative;
   cursor: pointer; }
+  .ido__more-wrapper {
+    overflow: hidden; }
   .ido__more[data-visible="true"] {
     display: block; }
   .ido__more[data-visible="false"] {
@@ -1000,8 +1034,10 @@ body {
   z-index: 0;
   color: white;
   border-radius: 3px;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  -webkit-transition: -webkit-box-shadow .3s ease-in;
+  transition: -webkit-box-shadow .3s ease-in;
+  transition: box-shadow .3s ease-in;
+  transition: box-shadow .3s ease-in, -webkit-box-shadow .3s ease-in;
   -webkit-box-shadow: 0px 0px 30px 25px rgba(29, 39, 56, 0.75), 0px 0px 15px 10px #1d2738;
           box-shadow: 0px 0px 30px 25px rgba(29, 39, 56, 0.75), 0px 0px 15px 10px #1d2738;
   font-family: "Proxima Nova", sans-serif;
@@ -1027,8 +1063,10 @@ body {
   .ido__btn:active {
     -webkit-box-shadow: 0px 0px 30px 25px rgba(29, 39, 56, 0), 0px 0px 15px 10px transparent;
             box-shadow: 0px 0px 30px 25px rgba(29, 39, 56, 0), 0px 0px 15px 10px transparent;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in; }
+    -webkit-transition: -webkit-box-shadow .1s ease-in;
+    transition: -webkit-box-shadow .1s ease-in;
+    transition: box-shadow .1s ease-in;
+    transition: box-shadow .1s ease-in, -webkit-box-shadow .1s ease-in; }
     .ido__btn:active:before {
       -webkit-box-shadow: inset 0px 2px 0.79px 0.21px rgba(0, 0, 0, 0.24);
               box-shadow: inset 0px 2px 0.79px 0.21px rgba(0, 0, 0, 0.24);
