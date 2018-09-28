@@ -43,6 +43,7 @@
 
     height: 440px;
     width: 185px;
+    min-width: 185px;
     background-image: url('../assets/imgs/img-cube-part-top.png'), url('../assets/imgs/img-cube-part-middle.png'), url('../assets/imgs/img-cube-part-bottom.png');
     background-position: 50% 37%, 50% calc(50% + 12px), 50% 66%;
     background-repeat: no-repeat;
@@ -78,11 +79,49 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+    min-width: 685px;
 
     margin: 0;
     padding: 0;
 
     list-style: none;
+  }
+
+  &__list-container {
+    @keyframes cube-text-animation {
+      0% {
+        width: 0%;
+      }
+
+      100% {
+        width: 100%;
+      }
+    }
+
+    width: 0;
+    transition: width .5s ease-in;
+    overflow: hidden;
+
+    &[data-animation-process="opening"] {
+      width: 0;
+      animation-name: cube-text-animation;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+    }
+
+    &[data-animation-process="closing"] {
+      width: 100%;
+      animation-name: cube-text-animation;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      animation-direction: reverse;
+    }
+
+    &[data-animation-process="open"] {
+      width: 100%;
+    }
   }
 
   &__text {

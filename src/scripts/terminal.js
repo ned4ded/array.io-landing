@@ -346,10 +346,11 @@ document.addEventListener('DOMContentLoaded', (() => {
     toggler.addEventListener('click', listener);
   });
 
-  class CubeImage {
+  class Animation {
     constructor(el, openTime = 500) {
       this.el = el;
       this.openTime = openTime;
+      this.notifyArr = [];
 
       this.vacate();
 
@@ -436,8 +437,11 @@ document.addEventListener('DOMContentLoaded', (() => {
     }
   }
 
-  const cubeEl = document.querySelector('[data-animation-process]');
-  const cube = new CubeImage(cubeEl);
+  const cubeEl = document.querySelector('[data-animation-process-name="cube"]');
+  const cube = new Animation(cubeEl);
+
+  const textEl = document.querySelector('[data-animation-process-name="text"]');
+  const text = new Animation(textEl);
 
   const getCubePosition = (top, height) => {
     const bottom = top + height;
@@ -458,13 +462,17 @@ document.addEventListener('DOMContentLoaded', (() => {
 
     if(cube.isState('closed') && getCubePosition(top, height) === 'in') {
       cube.open(() => {
-        changeCubeState();
+        text.open(() => {
+          changeCubeState();
+        });
       });
 
       return;
     } else if(cube.isState('open') && getCubePosition(top, height) === 'out') {
-      cube.close(() => {
-        changeCubeState();
+      text.close(() => {
+        cube.close(() => {
+          changeCubeState();
+        });
       });
 
       return;

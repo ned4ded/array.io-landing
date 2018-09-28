@@ -815,6 +815,7 @@ body {
             justify-content: space-between;
     height: 440px;
     width: 185px;
+    min-width: 185px;
     background-image: url("../assets/imgs/img-cube-part-top.png"), url("../assets/imgs/img-cube-part-middle.png"), url("../assets/imgs/img-cube-part-bottom.png");
     background-position: 50% 37%, 50% calc(50% + 12px), 50% 66%;
     background-repeat: no-repeat; }
@@ -860,9 +861,50 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    min-width: 685px;
     margin: 0;
     padding: 0;
     list-style: none; }
+  .features__list-container {
+    width: 0;
+    -webkit-transition: width .5s ease-in;
+    transition: width .5s ease-in;
+    overflow: hidden; }
+
+@-webkit-keyframes cube-text-animation {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
+
+@keyframes cube-text-animation {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
+    .features__list-container[data-animation-process="opening"] {
+      width: 0;
+      -webkit-animation-name: cube-text-animation;
+              animation-name: cube-text-animation;
+      -webkit-animation-duration: 0.5s;
+              animation-duration: 0.5s;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards; }
+    .features__list-container[data-animation-process="closing"] {
+      width: 100%;
+      -webkit-animation-name: cube-text-animation;
+              animation-name: cube-text-animation;
+      -webkit-animation-duration: 0.5s;
+              animation-duration: 0.5s;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      animation-direction: reverse; }
+    .features__list-container[data-animation-process="open"] {
+      width: 100%; }
   .features__text {
     display: block;
     max-width: 450px;
